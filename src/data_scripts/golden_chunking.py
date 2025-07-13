@@ -3,9 +3,10 @@ import nltk
 nltk.download("punkt")
 nltk.download("punkt_tab")
 
+import faiss
 import json
 from collections import defaultdict
-from sentence_transformers import SentenceTransformer, util
+from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 
 EMBEDDING_MODEL = "sentence-transformers/all-mpnet-base-v2"
@@ -31,8 +32,12 @@ def main(input_path, output_path):
         chunk_tests = [chunk["chunk_text"] for chunk in chunks]
         chunk_embeddings = model.encode(chunk_tests, convert_to_tensor=True)
         
-        similarities = util.cos_sim(q_embedding, chunk_embeddings)[0]
-        best_idx = similarities.argmax().item()
+        dim = chunk_embeddings.shape[1]
+        index = faiss.IndexFlatL2(dim)
+        index.add(chunk_embeddings)
+
+        _, I = index.search(q_embedding.reshape(1, -1), 1)
+        best_idx = I[0][0]
         best_chunk = chunks[best_idx]
 
         golden_dataset.append({
