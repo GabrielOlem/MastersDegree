@@ -19,7 +19,7 @@ def main(input_path, output_path):
         chunks_by_question[chunk["question_id"]].append(chunk)
 
     model = SentenceTransformer(EMBEDDING_MODEL)
-
+    print("Model and data ready")
     golden_dataset = []
     for qid, chunks in tqdm(chunks_by_question.items(), desc="Processing questions"):
         question = chunks[0]["question"]
