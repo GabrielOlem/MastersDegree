@@ -12,7 +12,7 @@ def chunk_text(text, tokenizer, chunk_size, overlap):
     chunks = []
     start = 0
     while start < len(tokens):
-	end = start + chunk_size
+        end = start + chunk_size
         chunk_tokens = tokens[start:end]
         chunk_text = tokenizer.decode(chunk_tokens, skip_special_tokens=True)
         chunks.append(chunk_text)
