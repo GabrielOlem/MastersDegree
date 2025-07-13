@@ -12,7 +12,7 @@ def chunk_text(text, tokenizer, chunk_size, overlap):
     chunks = []
     start = 0
     while start < len(tokens):
-        end = start + chunk_size
+	end = start + chunk_size
         chunk_tokens = tokens[start:end]
         chunk_text = tokenizer.decode(chunk_tokens, skip_special_tokens=True)
         chunks.append(chunk_text)
@@ -24,7 +24,7 @@ def main(input_path, output_path):
     tokenizer = AutoTokenizer.from_pretrained(TOKENIZER_NAME)
     with open(input_path, "r", encoding="utf-8") as f:
         raw_data = json.load(f)
-
+    print("Tokenizer and data ready")
     all_chunks = []
     for doc_id, item in enumerate(tqdm(raw_data, desc="Chunking documents")):
         paragraph_text = item["Context"]
