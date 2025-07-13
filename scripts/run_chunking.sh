@@ -17,4 +17,4 @@ source $HOME/env_teste/bin/activate
 #instalar pacotes desejados
 pip install -r requirements.txt
 #executar .py
-python -m scripts.run_chunking --input_path $HOME/mestrado/MastersDegree/data/dev.json --output_path $HOME/mestrado/MastersDegree/data/dev_chunks.json
+python -m scripts.run_chunking --input_path data/dev.json --output_path data/dev_chunks.json
