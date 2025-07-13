@@ -1,5 +1,5 @@
 import argparse
-from src.data.golden_chunking import main
+from src.data_scripts.golden_chunking import main
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run golden chunking pipeline.")

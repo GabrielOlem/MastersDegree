@@ -1,5 +1,5 @@
 import argparse
-from src.data.chunking import main
+from src.data_scripts.chunking import main
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run chunking pipeline.")

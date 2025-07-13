@@ -1,5 +1,5 @@
 import argparse
-from src.data.generation import main
+from src.data_scripts.generation import main
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run rationale/code generation pipeline.")
