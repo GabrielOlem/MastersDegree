@@ -1,61 +1,69 @@
 import argparse
-import nltk
-nltk.download("punkt")
-nltk.download("punkt_tab")
-
-import faiss
 import json
-from collections import defaultdict
-from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
+from sentence_transformers import SentenceTransformer
+from qdrant_client import QdrantClient
+from qdrant_client.http.models import Filter, FieldCondition, MatchValue, SearchRequest
+from hashlib import md5
 
 EMBEDDING_MODEL = "sentence-transformers/all-mpnet-base-v2"
+COLLECTION_NAME = "docfinqa_chunks"
 
-def main(input_path, output_path):
-    with open(input_path, "r", encoding="utf-8") as f:
-        chunk_data = json.load(f)
-
-    chunks_by_question = defaultdict(list)
-    for chunk in chunk_data:
-        chunks_by_question[chunk["question_id"]].append(chunk)
+def main(questions_path, output_path):
+    # Carrega as perguntas (dev.json com question, answer, etc)
+    with open(questions_path, "r", encoding="utf-8") as f:
+        questions = json.load(f)
 
     model = SentenceTransformer(EMBEDDING_MODEL)
-    print("Model and data ready")
+    client = QdrantClient(host="localhost", port=6333)
+    print("Modelo e Qdrant conectados.")
+
     golden_dataset = []
-    for qid, chunks in tqdm(chunks_by_question.items(), desc="Processing questions"):
-        question = chunks[0]["question"]
-        answer = chunks[0]["answer"]
-        golden_program = chunks[0].get("golden_program")
+    for q in tqdm(questions, desc="Processando questões"):
+        question = q["Question"]
+        answer = q["Answer"]
+        program = q.get("Program", "")
+        context = q["Context"]  # usado como filtro
 
-        q_embedding = model.encode(question, convert_to_tensor=True)
+        context_hash = md5(context.encode('utf-8')).hexdigest()  # mesmo valor usado no embed_chunks_to_qdrant.py
 
-        chunk_tests = [chunk["chunk_text"] for chunk in chunks]
-        chunk_embeddings = model.encode(chunk_tests, convert_to_tensor=True)
+        q_embedding = model.encode(question).tolist()
+        search_result = client.query_points(
+            collection_name=COLLECTION_NAME,
+            query=q_embedding,
+            limit=1,
+            with_payload=True,
+            query_filter=Filter(
+                must=[
+                    FieldCondition(
+                        key="context_id",
+                        match=MatchValue(value=context_hash)
+                    )
+                ]
+            )
+        )
+        if not search_result:
+            print(f"Nenhum chunk encontrado para question={q['Question']}")
+            continue
+
+        best_chunk = search_result.points[0].payload["chunk_text"]
         
-        dim = chunk_embeddings.shape[1]
-        index = faiss.IndexFlatL2(dim)
-        index.add(chunk_embeddings)
-
-        _, I = index.search(q_embedding.reshape(1, -1), 1)
-        best_idx = I[0][0]
-        best_chunk = chunks[best_idx]
-
         golden_dataset.append({
-            "question_id": qid,
+            #"question_id": q.get("question_id", None),
             "question": question,
             "answer": answer,
-            "golden_program": golden_program,
-            "golden_chunk": best_chunk["chunk_text"],
-            "score": similarities[best_idx].item()
+            "program": program,
+            "golden_chunk": best_chunk,
+            "golden_score": search_result.points[0].score
         })
 
     with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(golden_dataset, f, ensure_ascii=False, indent=4)
-        print(f"Saved {len(golden_dataset)} golden chunks to {output_path}")
+        json.dump(golden_dataset, f, ensure_ascii=False, indent=2)
+        print(f"Salvo {len(golden_dataset)} golden chunks em {output_path}")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Generate golden chunks from chunked data.")
-    parser.add_argument("--input_path", type=str, required=True, help="Path to input chunked JSON file")
-    parser.add_argument("--output_path", type=str, required=True, help="Path to output golden JSON file")
+    parser = argparse.ArgumentParser(description="Gera golden chunks via Qdrant.")
+    parser.add_argument("--questions_path", type=str, required=True, help="Caminho para o arquivo dev.json")
+    parser.add_argument("--output_path", type=str, required=True, help="Arquivo JSON de saída com golden chunks")
     args = parser.parse_args()
-    main(args.input_path, args.output_path)
+    main(args.questions_path, args.output_path)

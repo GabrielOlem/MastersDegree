@@ -2,6 +2,7 @@ import argparse
 import json
 from tqdm import tqdm
 from transformers import AutoTokenizer
+from hashlib import md5
 
 CHUNK_SIZE = 512
 CHUNK_OVERLAP = 128
@@ -26,23 +27,24 @@ def main(input_path, output_path):
         raw_data = json.load(f)
     print("Tokenizer and data ready")
     all_chunks = []
-    for doc_id, item in enumerate(tqdm(raw_data, desc="Chunking documents")):
-        paragraph_text = item["Context"]
-        question = item["Question"]
-        answer = item["Answer"]
-        program = item.get("Program", "")
+    seen_contexts = set()
 
-        chunks = chunk_text(paragraph_text, tokenizer, CHUNK_SIZE, CHUNK_OVERLAP)
+    for item in tqdm(raw_data, desc="Processing unique contexts"):
+        context = item["Context"]
+        context_hash = md5(context.encode('utf-8')).hexdigest()
+        if context_hash in seen_contexts:
+            print(f"Skipping duplicate context: {context_hash}")
+            continue
+
+        chunks = chunk_text(context, tokenizer, CHUNK_SIZE, CHUNK_OVERLAP)
 
         for idx, chunk in enumerate(chunks):
             all_chunks.append({
-                "question_id": doc_id,
-                "chunk_id": f"{doc_id}_chunk_{idx}",
-                "chunk_text": chunk,
-                "question": question,
-                "answer": answer,
-                "golden_program": program
+                "context_id": context_hash,
+                "chunk_id": f"{context_hash}_chunk_{idx}",
+                "chunk_text": chunk
             })
+        seen_contexts.add(context_hash)
 
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(all_chunks, f, ensure_ascii=False, indent=2)
