@@ -2,12 +2,13 @@ import argparse
 import json
 from tqdm import tqdm
 from sentence_transformers import SentenceTransformer
+from hashlib import md5
 from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct, VectorParams, Distance, CollectionStatus
 
 QDRANT_COLLECTION_NAME = "docfinqa_chunks"
 EMBEDDING_MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"
-BATCH_SIZE = 100
+BATCH_SIZE = 64
 
 
 def batch(iterable, size):
@@ -32,6 +33,9 @@ def create_collection_if_not_exists(client, vector_dim):
         if status != CollectionStatus.GREEN:
             print(f"⚠️ Collection exists but is not ready (status: {status}).")
 
+def get_numerical_id_from_chunk_id(chunk_id):
+    return int(md5(chunk_id.encode('utf-8')).hexdigest(), 16) % (10 ** 12)  # 12 dígitos máx.
+
 def main(chunks_path):
     # Load chunked data
     with open(chunks_path, "r", encoding="utf-8") as f:
@@ -45,24 +49,23 @@ def main(chunks_path):
     create_collection_if_not_exists(client, vector_dim=model.get_sentence_embedding_dimension())
 
     points = []
-    for idx, item in enumerate(tqdm(chunks, desc="Embedding & indexing")):
-        vector = model.encode(item['chunk_text']).tolist()
-        points.append(PointStruct(
-            id=idx,
-            vector=vector,
-            payload={
-                "chunk_id": item["chunk_id"],
-                "context_id": item["context_id"],
-                "chunk_text": item['chunk_text']
-            }
-        ))
+    chunk_batches = list(batch(chunks, BATCH_SIZE))
+    for chunk_batch in tqdm(chunk_batches, desc="Embedding chunks"):
+        texts = [item['chunk_text'] for item in chunk_batch]
+        vectors = model.encode(texts, convert_to_numpy=True, batch_size=128, show_progress_bar=False)
 
-
-    for batch_points in tqdm(batch(points, BATCH_SIZE), desc="Sending to Qdrant"):
-        client.upsert(
-            collection_name=QDRANT_COLLECTION_NAME,
-            points=batch_points
-        )
+        for vector, item in zip(vectors, chunk_batch):
+            points.append(PointStruct(
+                id=get_numerical_id_from_chunk_id(item["chunk_id"]),
+                vector=vector.tolist(),
+                payload={
+                    "chunk_id": item["chunk_id"],
+                    "context_id": item["context_id"],
+                    "chunk_text": item['chunk_text']
+                }
+            ))
+        client.upsert(collection_name=QDRANT_COLLECTION_NAME, points=points)
+        points.clear()
     print(f"All chunks indexed in Qdrant collection '{QDRANT_COLLECTION_NAME}'.")
 
 if __name__ == "__main__":
