@@ -17,7 +17,7 @@ def batch(iterable, size):
         yield iterable[i:i + size]
 
 def connect_qdrant():
-    return QdrantClient(host="localhost", port=6333)
+    return QdrantClient(host="localhost", port=6334)
 
 def create_collection_if_not_exists(client, vector_dim):
     collections = client.get_collections().collections
@@ -45,6 +45,12 @@ def main(chunks_path):
 
     # Load model
     model = SentenceTransformer(EMBEDDING_MODEL_NAME)
+    if model.device.type != "cuda":
+        try:
+            model = model.to("cuda")
+            print("Moved model to GPU.")
+        except Exception as e:
+            print(f"Could not move model to GPU: {e}")
     client = connect_qdrant()
     create_collection_if_not_exists(client, vector_dim=model.get_sentence_embedding_dimension())
 
