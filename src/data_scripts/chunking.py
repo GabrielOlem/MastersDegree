@@ -41,11 +41,12 @@ def context_exists_in_qdrant(qdrant_client, collection_name, context_id):
 def main(input_path, output_path):
     # Tokenizer
     tokenizer = AutoTokenizer.from_pretrained(TOKENIZER_NAME)
+    print('Tokenizer ready')
     with open(input_path, "r", encoding="utf-8") as f:
         raw_data = json.load(f)
     print("Tokenizer and data ready")
 
-    qdrant = QdrantClient(host="localhost", port=6333)
+    qdrant = QdrantClient(host="localhost", port=6334)
     all_chunks = []
     seen_contexts = set()
 
@@ -79,4 +80,5 @@ if __name__ == "__main__":
     parser.add_argument("--input_path", type=str, required=True, help="Path to input JSON file")
     parser.add_argument("--output_path", type=str, required=True, help="Path to output JSON file")
     args = parser.parse_args()
+    print('a')
     main(args.input_path, args.output_path)
