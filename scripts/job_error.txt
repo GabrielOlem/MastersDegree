@@ -1,0 +1,2 @@
+/tmp/slurmd/job24523/slurm_script: line 17: venv/bin/activate: No such file or directory
+/opt/easybuild/software/Python/3.10.8-GCCcore-12.2.0/bin/python: Error while finding module specification for 'scripts.run_embed_to_qdrant' (ModuleNotFoundError: No module named 'scripts')

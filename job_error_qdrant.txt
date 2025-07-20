@@ -1,0 +1,74 @@
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/qdrant_client/http/api_client.py", line 134, in send_inner
+    response = self._client.send(request)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/CIN/gme/mestrado/MastersDegree/scripts/run_embed_to_qdrant.py", line 8, in <module>
+    main(args.chunks_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/data_scripts/embed_chunkings_to_qdrant.py", line 55, in main
+    create_collection_if_not_exists(client, vector_dim=model.get_sentence_embedding_dimension())
+  File "/home/CIN/gme/mestrado/MastersDegree/src/data_scripts/embed_chunkings_to_qdrant.py", line 23, in create_collection_if_not_exists
+    collections = client.get_collections().collections
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/qdrant_client/qdrant_client.py", line 2210, in get_collections
+    return self._client.get_collections(**kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/qdrant_client/qdrant_remote.py", line 2571, in get_collections
+    self.http.collections_api.get_collections().result
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/qdrant_client/http/api/collections_api.py", line 330, in get_collections
+    return self._build_for_get_collections()
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/qdrant_client/http/api/collections_api.py", line 159, in _build_for_get_collections
+    return self.api_client.request(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/qdrant_client/http/api_client.py", line 95, in request
+    return self.send(request, type_)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/qdrant_client/http/api_client.py", line 112, in send
+    response = self.middleware(request, self.send_inner)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/qdrant_client/http/api_client.py", line 250, in __call__
+    return call_next(request)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/qdrant_client/http/api_client.py", line 136, in send_inner
+    raise ResponseHandlingException(e)
+qdrant_client.http.exceptions.ResponseHandlingException: [Errno 111] Connection refused
