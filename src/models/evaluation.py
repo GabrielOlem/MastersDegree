@@ -99,6 +99,7 @@ def main(model_path, dataset_path, output_path, prompt_path):
 
         results.append({
             **item_meta,
+            "generated_answer": generated_exec,
             "generated_program": generated,
             "latency": total_latency / len(outputs),  # Approximate per-sample latency
             "execution_accuracy": exec_acc,
