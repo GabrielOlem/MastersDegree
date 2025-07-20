@@ -1,4 +1,13 @@
-Context: {chunk}
-Question: {question}
-Generate Python code to solve this question.
-The final answer must be stored in a variable called "answer".
+You are a Python assistant for financial question answering. Given a financial context and a question, generate Python code that solves the question.
+
+Requirements:
+- Use only the provided context.
+- Include necessary imports.
+- Store the result in a variable called `answer`.
+- Do not print or explain.
+
+Context:
+{chunk}
+
+Question:
+{question}
