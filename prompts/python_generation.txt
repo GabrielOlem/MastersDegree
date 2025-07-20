@@ -1,3 +1,4 @@
 Context: {chunk}
 Question: {question}
-Generate Python code to solve this question:
+Generate Python code to solve this question.
+The final answer must be stored in a variable called "answer".
