@@ -1,10 +1,12 @@
 # 📄 Notebook Inicial — Experimento DocFinQA
 
-from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
 # 🚩 Configurações
-model_id = "mistralai/Mistral-7B-Instruct-v0.2"  # ➕ Pode trocar para DeepSeek, Llama 3, etc.
+model_id = (
+    "mistralai/Mistral-7B-Instruct-v0.2"  # ➕ Pode trocar para DeepSeek, Llama 3, etc.
+)
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 🔥 Carregando modelo e tokenizer
@@ -13,7 +15,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_id)
 model = AutoModelForCausalLM.from_pretrained(
     model_id,
     device_map="auto",
-    torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32
+    torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
 )
 
 pipe = pipeline("text-generation", model=model, tokenizer=tokenizer)
@@ -42,7 +44,7 @@ Responda apenas com o valor numérico correto.
 
 # 🚀 Gerando resposta
 output = pipe(prompt, max_new_tokens=100, temperature=0)
-resposta = output[0]['generated_text'].split("Pergunta:")[-1]
+resposta = output[0]["generated_text"].split("Pergunta:")[-1]
 
 print("🧠 Resposta do modelo:")
 print(resposta)

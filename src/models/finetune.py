@@ -1,18 +1,20 @@
 import argparse
 import json
+
 from datasets import Dataset
+from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 from transformers import (
-    AutoTokenizer,
     AutoModelForCausalLM,
-    Trainer,
-    TrainingArguments,
+    AutoTokenizer,
     BitsAndBytesConfig,
     DataCollatorForLanguageModeling,
-    EarlyStoppingCallback
+    EarlyStoppingCallback,
+    Trainer,
+    TrainingArguments,
 )
-from peft import prepare_model_for_kbit_training, LoraConfig, get_peft_model
 
 MAX_LENGTH = 512
+
 
 def load_dataset(json_path, prompt_path):
     with open(json_path, "r", encoding="utf-8") as f:
@@ -36,13 +38,12 @@ def load_dataset(json_path, prompt_path):
 
     return Dataset.from_list(samples)
 
+
 def tokenize_function(examples, tokenizer):
     return tokenizer(
-        examples["text"],
-        truncation=True,
-        padding="max_length",
-        max_length=MAX_LENGTH
+        examples["text"], truncation=True, padding="max_length", max_length=MAX_LENGTH
     )
+
 
 def main(input_path, output_dir, model, prompt_path):
     tokenizer = AutoTokenizer.from_pretrained(model)
@@ -51,14 +52,12 @@ def main(input_path, output_dir, model, prompt_path):
         load_in_4bit=True,
         bnb_4bit_compute_dtype="float16",
         bnb_4bit_use_double_quant=True,
-        bnb_4bit_quant_type="nf4"
+        bnb_4bit_quant_type="nf4",
     )
-    
+
     # Load model in 4bit + prepare for LoRA
     model = AutoModelForCausalLM.from_pretrained(
-        model,
-        quantization_config=quant_config,
-        device_map="auto"
+        model, quantization_config=quant_config, device_map="auto"
     )
     model.gradient_checkpointing_enable()
     model = prepare_model_for_kbit_training(model)
@@ -70,7 +69,7 @@ def main(input_path, output_dir, model, prompt_path):
         target_modules=["query_key_value", "dense", "fc1", "fc2"],
         lora_dropout=0.05,
         bias="none",
-        task_type="CAUSAL_LM"
+        task_type="CAUSAL_LM",
     )
     model = get_peft_model(model, lora_config)
 
@@ -79,9 +78,13 @@ def main(input_path, output_dir, model, prompt_path):
 
     dataset = load_dataset(input_path, prompt_path)
     train_dataset, val_dataset = dataset.train_test_split(test_size=0.1).values()
-    tokenized_train = train_dataset.map(lambda x: tokenize_function(x, tokenizer), batched=True)
-    tokenized_val = val_dataset.map(lambda x: tokenize_function(x, tokenizer), batched=True)
-    #tokenized_dataset = dataset.map(lambda x: tokenize_function(x, tokenizer), batched=True)
+    tokenized_train = train_dataset.map(
+        lambda x: tokenize_function(x, tokenizer), batched=True
+    )
+    tokenized_val = val_dataset.map(
+        lambda x: tokenize_function(x, tokenizer), batched=True
+    )
+    # tokenized_dataset = dataset.map(lambda x: tokenize_function(x, tokenizer), batched=True)
 
     # training_args = TrainingArguments(
     #     output_dir=output_dir,
@@ -127,17 +130,35 @@ def main(input_path, output_dir, model, prompt_path):
         train_dataset=tokenized_train,
         eval_dataset=tokenized_val,
         data_collator=data_collator,
-        callbacks=[EarlyStoppingCallback(early_stopping_patience=2)]
+        callbacks=[EarlyStoppingCallback(early_stopping_patience=2)],
     )
 
     trainer.train()
     trainer.save_model(output_dir)
 
+
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Fine-tune small LLM to generate reasoning code from financial context.")
-    parser.add_argument("--input_path", type=str, required=True, help="Path to JSON with golden_program_generated")
-    parser.add_argument("--output_dir", type=str, required=True, help="Output directory to save fine-tuned model")
-    parser.add_argument("--model", type=str, default="meta-llama/Meta-Llama-3-8B-Instruct", help="Base model to fine-tune")
+    parser = argparse.ArgumentParser(
+        description="Fine-tune small LLM to generate reasoning code from financial context."
+    )
+    parser.add_argument(
+        "--input_path",
+        type=str,
+        required=True,
+        help="Path to JSON with golden_program_generated",
+    )
+    parser.add_argument(
+        "--output_dir",
+        type=str,
+        required=True,
+        help="Output directory to save fine-tuned model",
+    )
+    parser.add_argument(
+        "--model",
+        type=str,
+        default="meta-llama/Meta-Llama-3-8B-Instruct",
+        help="Base model to fine-tune",
+    )
     parser.add_argument("--prompt_path", type=str, required=True, help="Path to prompt")
     args = parser.parse_args()
     main(args.input_path, args.output_dir, args.model, args.prompt_path)
