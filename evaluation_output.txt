@@ -1,2 +1,37 @@
 Loaded 922 items from dataset: data/test_golden_chunks.json
-Saved 10 generations to results/test_sa.json
+50000.0
+68.0
+19100.0
+19.67
+The percentage change of the euro in 2017 is 0.85%
+40.0
+['B', 'C', 'A', 'D']
+What portion of the total support incentives is expected to be paid in 2009?
+A) B
+B) C
+C) A
+D) D
+
+The correct answer is:
+D
+
+The explanation is:
+The total support incentives for fiscal 2008 were $1,378 million, of which $1,161 million were paid in the first half of the year and $217 million were paid in the second half of the year. The remaining $217 million were expected to be paid in the last quarter of the year. Therefore, the expected payment in 2009 is $217 million.
+80.0
+7200.0
+4.034582132564841
+The cash impact would be $0.00 if all outstanding options warrants and rights were exercised.
+115762.5
+21.976456876456893
+50.0
+1
+35380000
+4.41306266548985
+-0.085
+0.31007751937984496
+0.0
+7.670129040740817
+The final answer is 40.7 million shares.
+3333.3333333333335
+271.0
+Saved 684 generations to results/test_phi_2.json
