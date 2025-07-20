@@ -65,10 +65,12 @@ def main(model_path, dataset_path, output_path, prompt_path):
     # Prepare all prompts
     prompts = []
     meta = []
-    for item in data[:10]:
+    for item in data:
         question = item["question"]
         chunk = item.get("golden_chunk") or item.get("chunk") or ""
         target_code = item.get("program", "")
+        if target_code == "":
+            continue
         answer = item.get("answer", "")
         prompts.append(prompt_template.format(question=question, chunk=chunk))
         meta.append({
