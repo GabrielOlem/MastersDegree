@@ -17,4 +17,4 @@ source .env/bin/activate
 #instalar pacotes desejados
 pip install -r requirements.txt
 #executar .py
-python -m scripts.run_chunking --input_path data/dev.json --output_path data/dev_chunks.json
+python -m src.data_scripts.chunking --input_path data/dev.json --output_path data/dev_chunks.json

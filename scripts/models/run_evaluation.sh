@@ -15,4 +15,4 @@ module load Python3.10
 source venv/bin/activate
 
 # Run evaluation script
-python -m scripts.run_evaluation --model_path "microsoft/phi-2" --dataset_path "data/test_golden_chunks.json" --output_path "results/test_phi_2.json" --prompt_path "prompts/python_generation.txt"
+python -m src.models.evaluation --model_path "microsoft/phi-2" --dataset_path "data/test_golden_chunks.json" --output_path "results/test_phi_2.json" --prompt_path "prompts/python_generation.txt"

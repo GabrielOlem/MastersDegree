@@ -17,4 +17,4 @@ source .env/bin/activate
 #instalar pacotes desejados
 pip install -r requirements.txt
 #executar .py
-python -m scripts.run_golden_chunking --input_path data/dev_chunks.json --output_path data/dev_golden.json
+python -m src.data_scripts.golden_chunking --input_path data/dev_chunks.json --output_path data/dev_golden.json

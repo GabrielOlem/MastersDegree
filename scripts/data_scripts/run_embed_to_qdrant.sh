@@ -18,4 +18,4 @@ source venv/bin/activate
 #instalar pacotes desejados
 # pip install -r requirements.txt
 #executar .py
-python -m scripts.run_embed_to_qdrant --chunks_path data/train_chunks.json
+python -m src.data_scripts.embed_chunkings_to_qdrant --chunks_path data/train_chunks.json
