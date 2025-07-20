@@ -10,7 +10,7 @@
 #SBATCH --error=job_error.txt
 
 #carregar versão python
-module load Python/3.10.8
+module load Python3.10
 #criar ambiente
 #python -m venv $HOME/env_teste
 #ativar ambiente
