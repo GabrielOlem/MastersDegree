@@ -17,6 +17,7 @@ def load_model(model_path):
 
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     tokenizer.pad_token = tokenizer.eos_token
+    tokenizer.padding_side = "left"  # Ensure left padding for decoder-only models
     return model, tokenizer
 
 def load_prompt_template(prompt_path):
@@ -84,7 +85,7 @@ def main(model_path, dataset_path, output_path, prompt_path):
 
     results = []
     for item_meta, output in zip(meta, outputs):
-        generated = output["generated_text"].strip()
+        generated = output[0]["generated_text"].strip()
         target_code = item_meta["golden_program_generated"]
         answer = item_meta["answer"]
 
