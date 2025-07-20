@@ -86,7 +86,7 @@ def main(model_path, dataset_path, output_path, prompt_path):
     total_latency = time.time() - start_time
 
     results = []
-    for item_meta, output in zip(meta, outputs):
+    for item_meta, output in tqdm(zip(meta, outputs), desc="Generating code", total=len(meta)):
         generated = output[0]["generated_text"].strip()
         target_code = item_meta["golden_program_generated"]
         answer = item_meta["answer"]
