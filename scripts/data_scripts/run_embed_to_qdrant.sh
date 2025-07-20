@@ -16,6 +16,6 @@ module load Python3.10
 #ativar ambiente
 source venv/bin/activate
 #instalar pacotes desejados
-# pip install -r requirements.txt
+pip install -r requirements.txt
 #executar .py
 python -m src.data_scripts.embed_chunkings_to_qdrant --chunks_path data/train_chunks.json

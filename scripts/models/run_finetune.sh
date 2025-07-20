@@ -13,6 +13,7 @@ module load Python3.10
 
 # Activate virtual environment
 source venv/bin/activate
+pip install -r requirements.txt
 
 # Run finetune script
 python -m src.models.finetune --model "microsoft/phi-2" --input_path "data/test_golden_chunks.json" --output_dir "models/phi_2_finetuned_test_data.json" --prompt_path "prompts/python_generation.txt"

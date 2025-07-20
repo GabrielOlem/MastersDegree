@@ -13,7 +13,7 @@ module load Python/3.10.8
 #criar ambiente
 #python -m venv $HOME/env_teste
 #ativar ambiente
-source .env/bin/activate
+source venv/bin/activate
 #instalar pacotes desejados
 pip install -r requirements.txt
 #executar .py
