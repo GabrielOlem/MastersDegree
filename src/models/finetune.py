@@ -15,6 +15,26 @@ from transformers import (
 
 MAX_LENGTH = 512
 
+LORA_TARGET_MODULES = {
+    "microsoft/phi-2": ["q_proj", "k_proj", "v_proj", "dense", "fc1", "fc2"],
+    "deepseek-ai/deepseek-coder-6.7b-instruct": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+    ],
+    "mistralai/Mistral-7B-Instruct-v0.3": ["q_proj", "k_proj", "v_proj", "o_proj"],
+    "Qwen/Qwen3-8B": ["q_proj", "k_proj", "v_proj", "o_proj"],
+}
+
+
+def get_lora_target_modules(model_name):
+    for key in LORA_TARGET_MODULES:
+        if key in model_name:
+            return LORA_TARGET_MODULES[key]
+    # Default fallback (may need adjustment)
+    return ["q_proj", "k_proj", "v_proj", "o_proj"]
+
 
 def load_dataset(json_path, prompt_path):
     with open(json_path, "r", encoding="utf-8") as f:
@@ -65,7 +85,7 @@ def main(input_path, output_dir, model, prompt_path):
     lora_config = LoraConfig(
         r=16,
         lora_alpha=32,
-        target_modules=["query_key_value", "dense", "fc1", "fc2"],
+        target_modules=get_lora_target_modules(model),
         lora_dropout=0.05,
         bias="none",
         task_type="CAUSAL_LM",
