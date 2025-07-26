@@ -5,8 +5,8 @@
 #SBATCH --mem=16G
 #SBATCH -c 8
 #SBATCH --gpus=2
-#SBATCH --output=evaluation_output.txt
-#SBATCH --error=evaluation_error.txt
+#SBATCH --output=logs/evaluation_cru_output.txt
+#SBATCH --error=logs/evaluation_cru_error.txt
 
 # Load Python module
 module load Python3.10

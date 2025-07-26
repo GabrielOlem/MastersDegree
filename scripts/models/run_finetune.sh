@@ -5,8 +5,8 @@
 #SBATCH --mem=16G
 #SBATCH -c 16
 #SBATCH --gpus=2
-#SBATCH --output=logs/finetune_output.txt
-#SBATCH --error=logs/finetune_error.txt
+#SBATCH --output=logs/finetune_cru_output.txt
+#SBATCH --error=logs/finetune_cru_error.txt
 
 # Load Python module
 module load Python3.10
