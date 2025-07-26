@@ -4,7 +4,7 @@
 #SBATCH --ntasks=1
 #SBATCH --mem=16G
 #SBATCH -c 8
-#SBATCH --gpus=1
+#SBATCH --gpus=2
 #SBATCH --output=evaluation_output.txt
 #SBATCH --error=evaluation_error.txt
 
