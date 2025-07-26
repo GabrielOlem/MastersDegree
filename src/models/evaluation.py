@@ -80,7 +80,7 @@ def main(model_path, dataset_path, output_path, prompt_path):
     # Prepare all prompts
     prompts = []
     meta = []
-    for item in data:
+    for item in tqdm(data, desc="Preparing prompts"):
         question = item["question"]
         chunk = item.get("golden_chunk") or item.get("chunk") or ""
         target_code = item.get("program", "")
@@ -97,6 +97,7 @@ def main(model_path, dataset_path, output_path, prompt_path):
             }
         )
 
+    print("Generating outputs for all prompts...")
     # Generate outputs in batch
     start_time = time.time()
     outputs = pipe(
