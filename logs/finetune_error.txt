@@ -1,0 +1,132 @@
+ERROR: Could not find a version that satisfies the requirement networkx==3.5 (from versions: 0.34, 0.35, 0.35.1, 0.36, 0.37, 0.99, 1.0rc1, 1.0, 1.0.1, 1.1, 1.2rc1, 1.2, 1.3rc1, 1.3, 1.4rc1, 1.4, 1.5rc1, 1.5, 1.6rc1, 1.6, 1.7rc1, 1.7, 1.8rc1, 1.8, 1.8.1, 1.9rc1, 1.9, 1.9.1, 1.10rc2, 1.10, 1.11rc1, 1.11rc2, 1.11, 2.0, 2.1, 2.2rc1, 2.2, 2.3rc3, 2.3rc4, 2.3, 2.4rc1, 2.4rc2, 2.4, 2.5rc1, 2.5, 2.5.1, 2.6rc1, 2.6rc2, 2.6, 2.6.1, 2.6.2, 2.6.3, 2.7rc1, 2.7, 2.7.1, 2.8rc1, 2.8, 2.8.1rc1, 2.8.1, 2.8.2, 2.8.3, 2.8.4, 2.8.5, 2.8.6, 2.8.7, 2.8.8, 3.0b1, 3.0rc1, 3.0, 3.1rc0, 3.1, 3.2rc0, 3.2, 3.2.1, 3.3rc0, 3.3, 3.4rc0, 3.4, 3.4.1, 3.4.2)
+ERROR: No matching distribution found for networkx==3.5
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:47<00:47, 47.18s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:53<00:00, 23.13s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:53<00:00, 26.74s/it]
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/finetune.py", line 143, in <module>
+    main(args.input_path, args.output_dir, args.model, args.prompt_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/finetune.py", line 98, in main
+    training_args = TrainingArguments(
+  File "<string>", line 133, in __init__
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/training_args.py", line 1663, in __post_init__
+    raise ValueError(
+ValueError: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: steps
+- Save strategy: epoch
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [03:37<03:37, 217.45s/it]Fetching 2 files: 100%|██████████| 2/2 [03:37<00:00, 108.73s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [01:35<01:35, 95.10s/it]Loading checkpoint shards: 100%|██████████| 2/2 [02:08<00:00, 58.83s/it]Loading checkpoint shards: 100%|██████████| 2/2 [02:08<00:00, 64.27s/it]
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/finetune.py", line 143, in <module>
+    main(args.input_path, args.output_dir, args.model, args.prompt_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/finetune.py", line 75, in main
+    model = get_peft_model(model, lora_config)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/mapping_func.py", line 125, in get_peft_model
+    return MODEL_TYPE_TO_PEFT_MODEL_MAPPING[peft_config.task_type](
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/peft_model.py", line 1810, in __init__
+    super().__init__(model, peft_config, adapter_name, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/peft_model.py", line 130, in __init__
+    self.base_model = cls(model, {adapter_name: peft_config}, adapter_name)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/tuners/lora/model.py", line 143, in __init__
+    super().__init__(model, config, adapter_name, low_cpu_mem_usage=low_cpu_mem_usage)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 203, in __init__
+    self.inject_adapter(self.model, adapter_name, low_cpu_mem_usage=low_cpu_mem_usage)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 550, in inject_adapter
+    raise ValueError(error_msg)
+ValueError: Target modules {'query_key_value', 'fc2', 'fc1', 'dense'} not found in the base model. Please check the target modules and try again.
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 470, in cached_files
+    hf_hub_download(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1008, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1115, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1645, in _raise_on_head_call_error
+    raise head_call_error
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1533, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1450, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+    response = _request_wrapper(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 310, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 426, in hf_raise_for_status
+    raise _format(GatedRepoError, message, response) from e
+huggingface_hub.errors.GatedRepoError: 401 Client Error. (Request ID: Root=1-687d6f39-7a517fd02c4e5cd55b11f912;8cac1a85-0aea-4cc1-9455-c2af6fe97448)
+
+Cannot access gated repo for url https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json.
+Access to model mistralai/Mistral-7B-Instruct-v0.3 is restricted. You must have access to it and be authenticated to access it. Please log in.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/finetune.py", line 143, in <module>
+    main(args.input_path, args.output_dir, args.model, args.prompt_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/finetune.py", line 48, in main
+    tokenizer = AutoTokenizer.from_pretrained(model)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 1003, in from_pretrained
+    config = AutoConfig.from_pretrained(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/models/auto/configuration_auto.py", line 1197, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/configuration_utils.py", line 608, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/configuration_utils.py", line 667, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 312, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 533, in cached_files
+    raise OSError(
+OSError: You are trying to access a gated repo.
+Make sure to have access to it at https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3.
+401 Client Error. (Request ID: Root=1-687d6f39-7a517fd02c4e5cd55b11f912;8cac1a85-0aea-4cc1-9455-c2af6fe97448)
+
+Cannot access gated repo for url https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json.
+Access to model mistralai/Mistral-7B-Instruct-v0.3 is restricted. You must have access to it and be authenticated to access it. Please log in.
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  20%|██        | 1/5 [07:16<29:06, 436.65s/it]Fetching 5 files: 100%|██████████| 5/5 [07:16<00:00, 87.33s/it] 
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:38<02:32, 38.14s/it]Loading checkpoint shards:  40%|████      | 2/5 [01:16<01:54, 38.10s/it]Loading checkpoint shards:  60%|██████    | 3/5 [01:53<01:15, 37.92s/it]Loading checkpoint shards:  80%|████████  | 4/5 [02:24<00:34, 34.98s/it]Loading checkpoint shards: 100%|██████████| 5/5 [02:36<00:00, 26.56s/it]Loading checkpoint shards: 100%|██████████| 5/5 [02:36<00:00, 31.20s/it]
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/finetune.py", line 143, in <module>
+    main(args.input_path, args.output_dir, args.model, args.prompt_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/finetune.py", line 75, in main
+    model = get_peft_model(model, lora_config)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/mapping_func.py", line 125, in get_peft_model
+    return MODEL_TYPE_TO_PEFT_MODEL_MAPPING[peft_config.task_type](
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/peft_model.py", line 1810, in __init__
+    super().__init__(model, peft_config, adapter_name, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/peft_model.py", line 130, in __init__
+    self.base_model = cls(model, {adapter_name: peft_config}, adapter_name)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/tuners/lora/model.py", line 143, in __init__
+    super().__init__(model, config, adapter_name, low_cpu_mem_usage=low_cpu_mem_usage)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 203, in __init__
+    self.inject_adapter(self.model, adapter_name, low_cpu_mem_usage=low_cpu_mem_usage)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 550, in inject_adapter
+    raise ValueError(error_msg)
+ValueError: Target modules {'fc1', 'fc2', 'dense', 'query_key_value'} not found in the base model. Please check the target modules and try again.

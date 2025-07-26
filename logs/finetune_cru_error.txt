@@ -1,0 +1,506 @@
+ERROR: Could not find a version that satisfies the requirement networkx==3.5 (from versions: 0.34, 0.35, 0.35.1, 0.36, 0.37, 0.99, 1.0rc1, 1.0, 1.0.1, 1.1, 1.2rc1, 1.2, 1.3rc1, 1.3, 1.4rc1, 1.4, 1.5rc1, 1.5, 1.6rc1, 1.6, 1.7rc1, 1.7, 1.8rc1, 1.8, 1.8.1, 1.9rc1, 1.9, 1.9.1, 1.10rc2, 1.10, 1.11rc1, 1.11rc2, 1.11, 2.0, 2.1, 2.2rc1, 2.2, 2.3rc3, 2.3rc4, 2.3, 2.4rc1, 2.4rc2, 2.4, 2.5rc1, 2.5, 2.5.1, 2.6rc1, 2.6rc2, 2.6, 2.6.1, 2.6.2, 2.6.3, 2.7rc1, 2.7, 2.7.1, 2.8rc1, 2.8, 2.8.1rc1, 2.8.1, 2.8.2, 2.8.3, 2.8.4, 2.8.5, 2.8.6, 2.8.7, 2.8.8, 3.0b1, 3.0rc1, 3.0, 3.1rc0, 3.1, 3.2rc0, 3.2, 3.2.1, 3.3rc0, 3.3, 3.4rc0, 3.4, 3.4.1, 3.4.2)
+ERROR: No matching distribution found for networkx==3.5
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:50<00:50, 50.66s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:56<00:00, 24.02s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:56<00:00, 28.01s/it]
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/finetune.py", line 164, in <module>
+    main(args.input_path, args.output_dir, args.model, args.prompt_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/finetune.py", line 101, in main
+    training_args = TrainingArguments(
+  File "<string>", line 133, in __init__
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/training_args.py", line 1663, in __post_init__
+    raise ValueError(
+ValueError: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: steps
+- Save strategy: epoch
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [01:28<01:28, 88.88s/it]Loading checkpoint shards: 100%|██████████| 2/2 [02:01<00:00, 55.70s/it]Loading checkpoint shards: 100%|██████████| 2/2 [02:01<00:00, 60.68s/it]
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/finetune.py", line 164, in <module>
+    main(args.input_path, args.output_dir, args.model, args.prompt_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/finetune.py", line 74, in main
+    model = get_peft_model(model, lora_config)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/mapping_func.py", line 125, in get_peft_model
+    return MODEL_TYPE_TO_PEFT_MODEL_MAPPING[peft_config.task_type](
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/peft_model.py", line 1810, in __init__
+    super().__init__(model, peft_config, adapter_name, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/peft_model.py", line 130, in __init__
+    self.base_model = cls(model, {adapter_name: peft_config}, adapter_name)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/tuners/lora/model.py", line 143, in __init__
+    super().__init__(model, config, adapter_name, low_cpu_mem_usage=low_cpu_mem_usage)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 203, in __init__
+    self.inject_adapter(self.model, adapter_name, low_cpu_mem_usage=low_cpu_mem_usage)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 550, in inject_adapter
+    raise ValueError(error_msg)
+ValueError: Target modules {'dense', 'fc1', 'fc2', 'query_key_value'} not found in the base model. Please check the target modules and try again.
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/finetune.py", line 164, in <module>
+    main(args.input_path, args.output_dir, args.model, args.prompt_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/finetune.py", line 49, in main
+    tokenizer = AutoTokenizer.from_pretrained(model)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 1050, in from_pretrained
+    return tokenizer_class.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2014, in from_pretrained
+    return cls._from_pretrained(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2260, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/models/llama/tokenization_llama_fast.py", line 154, in __init__
+    super().__init__(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/tokenization_utils_fast.py", line 108, in __init__
+    raise ValueError(
+ValueError: Cannot instantiate this tokenizer from a slow version. If it's based on sentencepiece, make sure you have sentencepiece installed.
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [01:17<05:10, 77.52s/it]Loading checkpoint shards:  40%|████      | 2/5 [04:06<06:34, 131.56s/it]Loading checkpoint shards:  60%|██████    | 3/5 [04:59<03:10, 95.50s/it] Loading checkpoint shards:  80%|████████  | 4/5 [05:38<01:13, 73.34s/it]Loading checkpoint shards: 100%|██████████| 5/5 [05:52<00:00, 51.84s/it]Loading checkpoint shards: 100%|██████████| 5/5 [05:52<00:00, 70.52s/it]
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/finetune.py", line 164, in <module>
+    )
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/finetune.py", line 63, in main
+    model, quantization_config=quant_config, device_map="auto"
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/utils/other.py", line 149, in prepare_model_for_kbit_training
+    param.data = param.data.to(torch.float32)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.32 GiB. GPU 0 has a total capacity of 9.50 GiB of which 770.00 MiB is free. Including non-PyTorch memory, this process has 8.73 GiB memory in use. Of the allocated memory 6.82 GiB is allocated by PyTorch, and 1.26 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/models/phi_2_finetuned_test_cru/resolve/main/adapter_config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/config.py", line 200, in from_pretrained
+    config_file = hf_hub_download(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1008, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1115, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1645, in _raise_on_head_call_error
+    raise head_call_error
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1533, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1450, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+    response = _request_wrapper(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 310, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 459, in hf_raise_for_status
+    raise _format(RepositoryNotFoundError, message, response) from e
+huggingface_hub.errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-68855f37-65ce8a125c4ec79907e0a908;2e7c7cf9-3df7-4972-a2c5-32f45052f970)
+
+Repository Not Found for url: https://huggingface.co/models/phi_2_finetuned_test_cru/resolve/main/adapter_config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/evaluation.py", line 14, in load_model
+    config = PeftConfig.from_pretrained(model_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/config.py", line 204, in from_pretrained
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{pretrained_model_name_or_path}'") from exc
+ValueError: Can't find 'adapter_config.json' at 'models/phi_2_finetuned_test_cru'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/models/phi_2_finetuned_test_cru/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 470, in cached_files
+    hf_hub_download(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1008, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1115, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1645, in _raise_on_head_call_error
+    raise head_call_error
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1533, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1450, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+    response = _request_wrapper(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 310, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 459, in hf_raise_for_status
+    raise _format(RepositoryNotFoundError, message, response) from e
+huggingface_hub.errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-68855f37-309a96ad7949cb76407ffebe;3d905bf3-6fb6-40be-9221-f095f0ac1e6a)
+
+Repository Not Found for url: https://huggingface.co/models/phi_2_finetuned_test_cru/resolve/main/config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/evaluation.py", line 164, in <module>
+    main(args.model_path, args.dataset_path, args.output_path, args.prompt_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/evaluation.py", line 74, in main
+    model, tokenizer = load_model(model_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/evaluation.py", line 20, in load_model
+    model = AutoModelForCausalLM.from_pretrained(model_path, device_map="auto")
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 508, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 312, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 502, in cached_files
+    raise OSError(
+OSError: models/phi_2_finetuned_test_cru is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/models/deepseek_coder_6_7b_instruct_finetuned_test_cru/resolve/main/adapter_config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/config.py", line 200, in from_pretrained
+    config_file = hf_hub_download(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1008, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1115, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1645, in _raise_on_head_call_error
+    raise head_call_error
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1533, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1450, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+    response = _request_wrapper(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 310, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 459, in hf_raise_for_status
+    raise _format(RepositoryNotFoundError, message, response) from e
+huggingface_hub.errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-68855f43-187406fb526727092c501ebd;d2f996b4-53d6-4727-b27e-3fa97643140c)
+
+Repository Not Found for url: https://huggingface.co/models/deepseek_coder_6_7b_instruct_finetuned_test_cru/resolve/main/adapter_config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/evaluation.py", line 14, in load_model
+    config = PeftConfig.from_pretrained(model_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/config.py", line 204, in from_pretrained
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{pretrained_model_name_or_path}'") from exc
+ValueError: Can't find 'adapter_config.json' at 'models/deepseek_coder_6_7b_instruct_finetuned_test_cru'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/models/deepseek_coder_6_7b_instruct_finetuned_test_cru/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 470, in cached_files
+    hf_hub_download(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1008, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1115, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1645, in _raise_on_head_call_error
+    raise head_call_error
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1533, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1450, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+    response = _request_wrapper(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 310, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 459, in hf_raise_for_status
+    raise _format(RepositoryNotFoundError, message, response) from e
+huggingface_hub.errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-68855f43-387de34c6f683e044ad86b5e;0f96a807-3bad-478c-8a7d-948c4b508e3a)
+
+Repository Not Found for url: https://huggingface.co/models/deepseek_coder_6_7b_instruct_finetuned_test_cru/resolve/main/config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/evaluation.py", line 164, in <module>
+    main(args.model_path, args.dataset_path, args.output_path, args.prompt_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/evaluation.py", line 74, in main
+    model, tokenizer = load_model(model_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/evaluation.py", line 20, in load_model
+    model = AutoModelForCausalLM.from_pretrained(model_path, device_map="auto")
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 508, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 312, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 502, in cached_files
+    raise OSError(
+OSError: models/deepseek_coder_6_7b_instruct_finetuned_test_cru is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/models/Mistral_7B_Instruct_v0_3_finetuned_test_cru/resolve/main/adapter_config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/config.py", line 200, in from_pretrained
+    config_file = hf_hub_download(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1008, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1115, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1645, in _raise_on_head_call_error
+    raise head_call_error
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1533, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1450, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+    response = _request_wrapper(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 310, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 459, in hf_raise_for_status
+    raise _format(RepositoryNotFoundError, message, response) from e
+huggingface_hub.errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-68855fcd-0d57021d0bda467d5c959999;882a322e-08f8-446a-a56a-1d4df9363b0c)
+
+Repository Not Found for url: https://huggingface.co/models/Mistral_7B_Instruct_v0_3_finetuned_test_cru/resolve/main/adapter_config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/evaluation.py", line 14, in load_model
+    config = PeftConfig.from_pretrained(model_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/config.py", line 204, in from_pretrained
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{pretrained_model_name_or_path}'") from exc
+ValueError: Can't find 'adapter_config.json' at 'models/Mistral_7B_Instruct_v0_3_finetuned_test_cru'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/models/Mistral_7B_Instruct_v0_3_finetuned_test_cru/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 470, in cached_files
+    hf_hub_download(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1008, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1115, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1645, in _raise_on_head_call_error
+    raise head_call_error
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1533, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1450, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+    response = _request_wrapper(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 310, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 459, in hf_raise_for_status
+    raise _format(RepositoryNotFoundError, message, response) from e
+huggingface_hub.errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-68855fcd-48bece8e50814a2f5e6ac3b1;a1a843be-0f80-43ea-aa63-c8c7ac907b90)
+
+Repository Not Found for url: https://huggingface.co/models/Mistral_7B_Instruct_v0_3_finetuned_test_cru/resolve/main/config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/evaluation.py", line 164, in <module>
+    main(args.model_path, args.dataset_path, args.output_path, args.prompt_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/evaluation.py", line 74, in main
+    model, tokenizer = load_model(model_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/evaluation.py", line 20, in load_model
+    model = AutoModelForCausalLM.from_pretrained(model_path, device_map="auto")
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 508, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 312, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 502, in cached_files
+    raise OSError(
+OSError: models/Mistral_7B_Instruct_v0_3_finetuned_test_cru is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/models/Qwen3_8B_finetuned_test_cru/resolve/main/adapter_config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/config.py", line 200, in from_pretrained
+    config_file = hf_hub_download(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1008, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1115, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1645, in _raise_on_head_call_error
+    raise head_call_error
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1533, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1450, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+    response = _request_wrapper(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 310, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 459, in hf_raise_for_status
+    raise _format(RepositoryNotFoundError, message, response) from e
+huggingface_hub.errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-68855fd9-1719c9eb78ac484051854c33;a637d1bd-ccc5-4cbc-9e6d-61de820fd2af)
+
+Repository Not Found for url: https://huggingface.co/models/Qwen3_8B_finetuned_test_cru/resolve/main/adapter_config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/evaluation.py", line 14, in load_model
+    config = PeftConfig.from_pretrained(model_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/peft/config.py", line 204, in from_pretrained
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{pretrained_model_name_or_path}'") from exc
+ValueError: Can't find 'adapter_config.json' at 'models/Qwen3_8B_finetuned_test_cru'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/models/Qwen3_8B_finetuned_test_cru/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 470, in cached_files
+    hf_hub_download(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1008, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1115, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1645, in _raise_on_head_call_error
+    raise head_call_error
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1533, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1450, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+    response = _request_wrapper(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 310, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 459, in hf_raise_for_status
+    raise _format(RepositoryNotFoundError, message, response) from e
+huggingface_hub.errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-68855fd9-619ec4f3451d394a198ed74a;17f7c24d-084e-4662-a042-fc0ad1617380)
+
+Repository Not Found for url: https://huggingface.co/models/Qwen3_8B_finetuned_test_cru/resolve/main/config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/evaluation.py", line 164, in <module>
+    main(args.model_path, args.dataset_path, args.output_path, args.prompt_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/evaluation.py", line 74, in main
+    model, tokenizer = load_model(model_path)
+  File "/home/CIN/gme/mestrado/MastersDegree/src/models/evaluation.py", line 20, in load_model
+    model = AutoModelForCausalLM.from_pretrained(model_path, device_map="auto")
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 508, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 312, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 502, in cached_files
+    raise OSError(
+OSError: models/Qwen3_8B_finetuned_test_cru is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`

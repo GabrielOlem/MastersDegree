@@ -1,0 +1,35 @@
+Requirement already satisfied: accelerate==1.9.0 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 1)) (1.9.0)
+Requirement already satisfied: annotated-types==0.7.0 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 2)) (0.7.0)
+Requirement already satisfied: anyio==4.9.0 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 3)) (4.9.0)
+Requirement already satisfied: backoff==2.2.1 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 4)) (2.2.1)
+Requirement already satisfied: bitsandbytes==0.46.1 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 5)) (0.46.1)
+Requirement already satisfied: certifi==2025.7.14 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 6)) (2025.7.14)
+Requirement already satisfied: charset-normalizer==3.4.2 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 7)) (3.4.2)
+Collecting colorama==0.4.6
+  Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Requirement already satisfied: filelock==3.18.0 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 9)) (3.18.0)
+Collecting fsspec==2025.7.0
+  Using cached fsspec-2025.7.0-py3-none-any.whl (199 kB)
+Requirement already satisfied: googleapis-common-protos==1.70.0 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 11)) (1.70.0)
+Requirement already satisfied: grpcio==1.73.1 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 12)) (1.73.1)
+Requirement already satisfied: h11==0.16.0 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 13)) (0.16.0)
+Requirement already satisfied: h2==4.2.0 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 14)) (4.2.0)
+Requirement already satisfied: hpack==4.1.0 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 15)) (4.1.0)
+Requirement already satisfied: httpcore==1.0.9 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 16)) (1.0.9)
+Requirement already satisfied: httpx==0.28.1 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 17)) (0.28.1)
+Requirement already satisfied: huggingface-hub==0.33.4 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 18)) (0.33.4)
+Requirement already satisfied: hyperframe==6.1.0 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 19)) (6.1.0)
+Requirement already satisfied: idna==3.10 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 20)) (3.10)
+Requirement already satisfied: importlib_metadata==8.7.0 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 21)) (8.7.0)
+Requirement already satisfied: Jinja2==3.1.6 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 22)) (3.1.6)
+Requirement already satisfied: joblib==1.5.1 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 23)) (1.5.1)
+Requirement already satisfied: langfuse==3.2.1 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 24)) (3.2.1)
+Requirement already satisfied: MarkupSafe==3.0.2 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 25)) (3.0.2)
+Requirement already satisfied: mpmath==1.3.0 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 26)) (1.3.0)
+Loaded 922 items from dataset: data/test_golden_chunks.json
+Generating outputs for all prompts...
+Loaded 922 items from dataset: data/test_golden_chunks.json
+Generating outputs for all prompts...
+Loaded 922 items from dataset: data/test_golden_chunks.json
+Loaded 922 items from dataset: data/test_golden_chunks.json
+Generating outputs for all prompts...

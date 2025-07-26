@@ -28,8 +28,11 @@ def load_dataset(json_path, prompt_path):
         question = item["question"]
         program = item.get("golden_program_generated", "").strip()
 
+        print(program)
+
         # skip if program is missing
         if not program:
+            print('a')
             continue
 
         compiled_prompt = prompt.format(question=question, chunk=context)
