@@ -21,21 +21,20 @@ def load_dataset(json_path, prompt_path):
         data = json.load(f)
     with open(prompt_path, "r", encoding="utf-8") as f:
         prompt = f.read()
-
     samples = []
     for item in data:
         context = item["golden_chunk"]
         question = item["question"]
-        program = item.get("golden_program_generated", "").strip()
-
+        try:
+            program = item["golden_program_generated"].strip()
+        except KeyError:
+            program = item["program"].strip() if "program" in item else None
         # skip if program is missing
         if not program:
             continue
-
         compiled_prompt = prompt.format(question=question, chunk=context)
         label = f"{compiled_prompt}\n{program}"
         samples.append({"text": label})
-
     return Dataset.from_list(samples)
 
 
