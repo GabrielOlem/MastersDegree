@@ -99,7 +99,7 @@ def main(model_path, dataset_path, output_path, prompt_path):
     start_time = time.time()
     outputs = pipe(
         prompts,
-        batch_size=2,
+        batch_size=8,
         max_new_tokens=1024,
         do_sample=False,
         return_full_text=False,
