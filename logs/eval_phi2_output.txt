@@ -27,4 +27,6 @@ Requirement already satisfied: langfuse==3.2.1 in ./venv/lib/python3.10/site-pac
 Requirement already satisfied: MarkupSafe==3.0.2 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 25)) (3.0.2)
 Requirement already satisfied: mpmath==1.3.0 in ./venv/lib/python3.10/site-packages (from -r requirements.txt (line 26)) (1.3.0)
 Loaded 922 items from dataset: data/test_golden_chunks.json
-Loaded 922 items from dataset: data/test_golden_chunks.json
+1.421994884910486
+91.41104294478527
+Saved 684 generations to results/test_cru_phi_2.json

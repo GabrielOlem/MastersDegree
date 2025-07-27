@@ -1,11 +1,21 @@
 ERROR: Could not find a version that satisfies the requirement networkx==3.5 (from versions: 0.34, 0.35, 0.35.1, 0.36, 0.37, 0.99, 1.0rc1, 1.0, 1.0.1, 1.1, 1.2rc1, 1.2, 1.3rc1, 1.3, 1.4rc1, 1.4, 1.5rc1, 1.5, 1.6rc1, 1.6, 1.7rc1, 1.7, 1.8rc1, 1.8, 1.8.1, 1.9rc1, 1.9, 1.9.1, 1.10rc2, 1.10, 1.11rc1, 1.11rc2, 1.11, 2.0, 2.1, 2.2rc1, 2.2, 2.3rc3, 2.3rc4, 2.3, 2.4rc1, 2.4rc2, 2.4, 2.5rc1, 2.5, 2.5.1, 2.6rc1, 2.6rc2, 2.6, 2.6.1, 2.6.2, 2.6.3, 2.7rc1, 2.7, 2.7.1, 2.8rc1, 2.8, 2.8.1rc1, 2.8.1, 2.8.2, 2.8.3, 2.8.4, 2.8.5, 2.8.6, 2.8.7, 2.8.8, 3.0b1, 3.0rc1, 3.0, 3.1rc0, 3.1, 3.2rc0, 3.2, 3.2.1, 3.3rc0, 3.3, 3.4rc0, 3.4, 3.4.1, 3.4.2)
 ERROR: No matching distribution found for networkx==3.5
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.60s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.15s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.37s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.44s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  1.83s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.07s/it]
 Some parameters are on the meta device because they were offloaded to the cpu.
 Device set to use cuda:0
 Generating code:   0%|          | 0/922 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-Generating code:   0%|          | 1/922 [00:47<12:03:34, 47.14s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-Generating code:   0%|          | 2/922 [03:49<29:17:23, 114.61s/it]
+Generating code:   0%|          | 1/922 [06:56<106:39:25, 416.90s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   0%|          | 3/922 [14:41<71:30:45, 280.14s/it] The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   0%|          | 4/922 [23:45<94:44:13, 371.52s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   1%|          | 6/922 [33:30<84:31:50, 332.22s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   1%|          | 8/922 [44:01<82:33:23, 325.17s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   1%|          | 9/922 [56:03<105:29:18, 415.95s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   1%|          | 10/922 [1:08:35<126:23:28, 498.91s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   1%|▏         | 12/922 [1:35:11<157:19:02, 622.35s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   2%|▏         | 14/922 [1:51:31<144:34:15, 573.19s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   2%|▏         | 15/922 [1:57:07<131:54:42, 523.57s/it]You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   2%|▏         | 15/922 [2:24:33<145:41:25, 578.26s/it]
 Traceback (most recent call last):
   File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
     return _run_code(code, main_globals, None,
@@ -39,7 +49,7 @@ Traceback (most recent call last):
     output = module._old_forward(*args, **kwargs)
   File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/utils/generic.py", line 943, in wrapper
     output = func(self, *args, **kwargs)
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/models/phi/modeling_phi.py", line 543, in forward
+  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 569, in forward
     logits = self.lm_head(hidden_states[:, slice_indices, :])
   File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
     return self._call_impl(*args, **kwargs)
@@ -51,9 +61,4 @@ Traceback (most recent call last):
     set_module_tensor_to_device(
   File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/accelerate/utils/modeling.py", line 343, in set_module_tensor_to_device
     new_value = value.to(device, non_blocking=non_blocking)
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 500.00 MiB. GPU 0 has a total capacity of 9.50 GiB of which 412.00 MiB is free. Including non-PyTorch memory, this process has 9.08 GiB memory in use. Of the allocated memory 7.95 GiB is allocated by PyTorch, and 278.54 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.47s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  1.85s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.09s/it]
-Some parameters are on the meta device because they were offloaded to the cpu.
-Device set to use cuda:0
-Generating code:   0%|          | 0/922 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-slurmstepd: error: *** JOB 24838 ON cluster-node6 CANCELLED AT 2025-07-27T00:15:52 ***
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 504.00 MiB. GPU 0 has a total capacity of 9.50 GiB of which 468.00 MiB is free. Including non-PyTorch memory, this process has 9.02 GiB memory in use. Of the allocated memory 8.03 GiB is allocated by PyTorch, and 140.44 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
