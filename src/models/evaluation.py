@@ -75,43 +75,24 @@ def main(model_path, dataset_path, output_path, prompt_path):
         "text-generation", model=model, tokenizer=tokenizer, device_map="auto"
     )
     prompt_template = load_prompt_template(prompt_path)
-    # Prepare all prompts
-    prompts = []
-    meta = []
-    for item in tqdm(data, desc="Preparing prompts"):
+    results = []
+    for item in tqdm(data, desc="Generating code"):
         question = item["question"]
         chunk = item.get("golden_chunk") or item.get("chunk") or ""
         target_code = item.get("program", "")
         if target_code == "":
             continue
         answer = item.get("answer", "")
-        prompts.append(prompt_template.format(question=question, chunk=chunk))
-        meta.append(
-            {
-                "question": question,
-                "golden_chunk": chunk,
-                "answer": answer,
-                "golden_program_generated": target_code,
-            }
+        prompt = prompt_template.format(question=question, chunk=chunk)
+        start_time = time.time()
+        output = pipe(
+            prompt,
+            max_new_tokens=1024,
+            do_sample=False,
+            return_full_text=False,
         )
-    print("Generating outputs for all prompts...")
-    # Generate outputs in batch
-    start_time = time.time()
-    outputs = pipe(
-        prompts,
-        batch_size=8,
-        max_new_tokens=1024,
-        do_sample=False,
-        return_full_text=False,
-    )
-    total_latency = time.time() - start_time
-    results = []
-    for item_meta, output in tqdm(
-        zip(meta, outputs), desc="Generating code", total=len(meta)
-    ):
+        latency = time.time() - start_time
         generated = output[0]["generated_text"].strip()
-        target_code = item_meta["golden_program_generated"]
-        answer = item_meta["answer"]
         answer_exec = safe_exec(target_code)
         generated_exec = safe_exec(generated)
         # Metrics
@@ -120,11 +101,13 @@ def main(model_path, dataset_path, output_path, prompt_path):
         prog_em = program_exact_match(generated, target_code)
         results.append(
             {
-                **item_meta,
+                "question": question,
+                "golden_chunk": chunk,
+                "answer": answer,
+                "golden_program_generated": target_code,
                 "generated_answer": generated_exec,
                 "generated_program": generated,
-                "latency": total_latency
-                / len(outputs),  # Approximate per-sample latency
+                "latency": latency,
                 "execution_accuracy": exec_acc,
                 "answer_exact_match": ans_em,
                 "program_exact_match": prog_em,
