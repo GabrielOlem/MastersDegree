@@ -64,8 +64,8 @@ def tokenize_function(examples, tokenizer):
     )
 
 
-def main(input_path, output_dir, model, prompt_path):
-    tokenizer = AutoTokenizer.from_pretrained(model)
+def main(input_path, output_dir, model_name, prompt_path):
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     quant_config = BitsAndBytesConfig(
         load_in_4bit=True,
@@ -76,7 +76,7 @@ def main(input_path, output_dir, model, prompt_path):
 
     # Load model in 4bit + prepare for LoRA
     model = AutoModelForCausalLM.from_pretrained(
-        model, quantization_config=quant_config, device_map="auto"
+        model_name, quantization_config=quant_config, device_map="auto"
     )
     model.gradient_checkpointing_enable()
     model = prepare_model_for_kbit_training(model)
@@ -85,7 +85,7 @@ def main(input_path, output_dir, model, prompt_path):
     lora_config = LoraConfig(
         r=16,
         lora_alpha=32,
-        target_modules=get_lora_target_modules(model),
+        target_modules=get_lora_target_modules(model_name),
         lora_dropout=0.05,
         bias="none",
         task_type="CAUSAL_LM",
