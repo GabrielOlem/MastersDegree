@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH --job-name=finetune_mistral
+#SBATCH --partition=short
+#SBATCH --ntasks=1
+#SBATCH --mem=16G
+#SBATCH -c 16
+#SBATCH --gpus=1
+#SBATCH --output=logs/finetune_mistral_output.txt
+#SBATCH --error=logs/finetune_mistral_error.txt
+
+module load Python3.10
+source venv/bin/activate
+pip install -r requirements.txt
+export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:32
+
+python -m src.models.finetune --model "mistralai/Mistral-7B-Instruct-v0.3" --input_path "data/test_golden_chunks.json" --output_dir "models/Mistral_7B_Instruct_v0_3_finetuned_test_cru" --prompt_path "prompts/python_generation.txt"
+python -m src.models.evaluation --model_path "models/Mistral_7B_Instruct_v0_3_finetuned_test_cru" --dataset_path "data/test_golden_chunks.json" --output_path "results/Mistral_7B_Instruct_v0.3_finetuned_test_data.json" --prompt_path "prompts/python_generation.txt"
