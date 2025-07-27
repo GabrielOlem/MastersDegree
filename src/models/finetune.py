@@ -123,9 +123,10 @@ def main(input_path, output_dir, model_name, prompt_path):
         gradient_accumulation_steps=4,
         num_train_epochs=100,  # Set high, let early stopping decide
         logging_steps=20,
-        save_strategy="epoch",
+        save_strategy="steps",
         eval_strategy="steps",
         eval_steps=100,  # Evaluate every 100 steps
+        save_steps=100,
         report_to="none",
         fp16=True,
         save_total_limit=1,
