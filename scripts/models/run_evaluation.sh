@@ -14,7 +14,7 @@ module load Python3.10
 # Activate virtual environment
 source venv/bin/activate
 pip install -r requirements.txt
-
+export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:32
 # Run evaluation script
 python -m src.models.evaluation --model_path "microsoft/phi-2" --dataset_path "data/test_golden_chunks.json" --output_path "results/test_cru_phi_2.json" --prompt_path "prompts/python_generation.txt"
 python -m src.models.evaluation --model_path "deepseek-ai/deepseek-coder-6.7b-instruct" --dataset_path "data/test_golden_chunks.json" --output_path "results/test_cru_deepseek_coder_6_7b_instruct.json" --prompt_path "prompts/python_generation.txt"

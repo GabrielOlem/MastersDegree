@@ -69,14 +69,12 @@ def main(model_path, dataset_path, output_path, prompt_path):
     with open(dataset_path, "r", encoding="utf-8") as f:
         data = json.load(f)
     print(f"Loaded {len(data)} items from dataset: {dataset_path}")
-
     # Load model and prompt
     model, tokenizer = load_model(model_path)
     pipe = pipeline(
         "text-generation", model=model, tokenizer=tokenizer, device_map="auto"
     )
     prompt_template = load_prompt_template(prompt_path)
-
     # Prepare all prompts
     prompts = []
     meta = []
@@ -96,19 +94,17 @@ def main(model_path, dataset_path, output_path, prompt_path):
                 "golden_program_generated": target_code,
             }
         )
-
     print("Generating outputs for all prompts...")
     # Generate outputs in batch
     start_time = time.time()
     outputs = pipe(
         prompts,
-        batch_size=8,
+        batch_size=2,
         max_new_tokens=1024,
         do_sample=False,
         return_full_text=False,
     )
     total_latency = time.time() - start_time
-
     results = []
     for item_meta, output in tqdm(
         zip(meta, outputs), desc="Generating code", total=len(meta)
@@ -116,15 +112,12 @@ def main(model_path, dataset_path, output_path, prompt_path):
         generated = output[0]["generated_text"].strip()
         target_code = item_meta["golden_program_generated"]
         answer = item_meta["answer"]
-
         answer_exec = safe_exec(target_code)
         generated_exec = safe_exec(generated)
-
         # Metrics
         exec_acc = execution_accuracy(generated_exec, answer_exec)
         ans_em = answer_exact_match(answer_exec, answer)
         prog_em = program_exact_match(generated, target_code)
-
         results.append(
             {
                 **item_meta,
@@ -137,7 +130,6 @@ def main(model_path, dataset_path, output_path, prompt_path):
                 "program_exact_match": prog_em,
             }
         )
-
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=4)
     print(f"Saved {len(results)} generations to {output_path}")
