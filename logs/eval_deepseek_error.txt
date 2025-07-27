@@ -1,64 +1,690 @@
 ERROR: Could not find a version that satisfies the requirement networkx==3.5 (from versions: 0.34, 0.35, 0.35.1, 0.36, 0.37, 0.99, 1.0rc1, 1.0, 1.0.1, 1.1, 1.2rc1, 1.2, 1.3rc1, 1.3, 1.4rc1, 1.4, 1.5rc1, 1.5, 1.6rc1, 1.6, 1.7rc1, 1.7, 1.8rc1, 1.8, 1.8.1, 1.9rc1, 1.9, 1.9.1, 1.10rc2, 1.10, 1.11rc1, 1.11rc2, 1.11, 2.0, 2.1, 2.2rc1, 2.2, 2.3rc3, 2.3rc4, 2.3, 2.4rc1, 2.4rc2, 2.4, 2.5rc1, 2.5, 2.5.1, 2.6rc1, 2.6rc2, 2.6, 2.6.1, 2.6.2, 2.6.3, 2.7rc1, 2.7, 2.7.1, 2.8rc1, 2.8, 2.8.1rc1, 2.8.1, 2.8.2, 2.8.3, 2.8.4, 2.8.5, 2.8.6, 2.8.7, 2.8.8, 3.0b1, 3.0rc1, 3.0, 3.1rc0, 3.1, 3.2rc0, 3.2, 3.2.1, 3.3rc0, 3.3, 3.4rc0, 3.4, 3.4.1, 3.4.2)
 ERROR: No matching distribution found for networkx==3.5
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.44s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  1.83s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.07s/it]
-Some parameters are on the meta device because they were offloaded to the cpu.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [01:26<01:26, 86.48s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:57<00:00, 53.97s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:57<00:00, 58.85s/it]
 Device set to use cuda:0
 Generating code:   0%|          | 0/922 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-Generating code:   0%|          | 1/922 [06:56<106:39:25, 416.90s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-Generating code:   0%|          | 3/922 [14:41<71:30:45, 280.14s/it] The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-Generating code:   0%|          | 4/922 [23:45<94:44:13, 371.52s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-Generating code:   1%|          | 6/922 [33:30<84:31:50, 332.22s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-Generating code:   1%|          | 8/922 [44:01<82:33:23, 325.17s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-Generating code:   1%|          | 9/922 [56:03<105:29:18, 415.95s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-Generating code:   1%|          | 10/922 [1:08:35<126:23:28, 498.91s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-Generating code:   1%|▏         | 12/922 [1:35:11<157:19:02, 622.35s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-Generating code:   2%|▏         | 14/922 [1:51:31<144:34:15, 573.19s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-Generating code:   2%|▏         | 15/922 [1:57:07<131:54:42, 523.57s/it]You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+Generating code:   0%|          | 1/922 [00:07<1:50:11,  7.18s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   0%|          | 3/922 [00:13<1:04:06,  4.19s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   0%|          | 4/922 [00:20<1:20:32,  5.26s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   1%|          | 6/922 [00:28<1:09:43,  4.57s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   1%|          | 8/922 [00:36<1:07:28,  4.43s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   1%|          | 9/922 [00:46<1:25:15,  5.60s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   1%|          | 10/922 [00:56<1:41:29,  6.68s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   1%|▏         | 12/922 [01:17<2:05:48,  8.30s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   2%|▏         | 14/922 [01:30<1:56:17,  7.68s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   2%|▏         | 15/922 [01:36<1:50:47,  7.33s/it]You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
 The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-Generating code:   2%|▏         | 15/922 [2:24:33<145:41:25, 578.26s/it]
-Traceback (most recent call last):
-  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
-    return _run_code(code, main_globals, None,
-  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
-    exec(code, run_globals)
-  File "/home/CIN/gme/mestrado/MastersDegree/src/models/evaluation.py", line 139, in <module>
-    main(args.model_path, args.dataset_path, args.output_path, args.prompt_path)
-  File "/home/CIN/gme/mestrado/MastersDegree/src/models/evaluation.py", line 88, in main
-    output = pipe(
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/pipelines/text_generation.py", line 316, in __call__
-    return super().__call__(text_inputs, **kwargs)
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1464, in __call__
-    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1471, in run_single
-    model_outputs = self.forward(model_inputs, **forward_params)
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1371, in forward
-    model_outputs = self._forward(model_inputs, **forward_params)
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/pipelines/text_generation.py", line 414, in _forward
-    output = self.model.generate(input_ids=input_ids, attention_mask=attention_mask, **generate_kwargs)
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
-    return func(*args, **kwargs)
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 2625, in generate
-    result = self._sample(
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 3609, in _sample
-    outputs = model_forward(**model_inputs, return_dict=True)
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/accelerate/hooks.py", line 175, in new_forward
-    output = module._old_forward(*args, **kwargs)
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/utils/generic.py", line 943, in wrapper
-    output = func(self, *args, **kwargs)
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 569, in forward
-    logits = self.lm_head(hidden_states[:, slice_indices, :])
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/accelerate/hooks.py", line 170, in new_forward
-    args, kwargs = module._hf_hook.pre_forward(module, *args, **kwargs)
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/accelerate/hooks.py", line 360, in pre_forward
-    set_module_tensor_to_device(
-  File "/home/CIN/gme/mestrado/MastersDegree/venv/lib/python3.10/site-packages/accelerate/utils/modeling.py", line 343, in set_module_tensor_to_device
-    new_value = value.to(device, non_blocking=non_blocking)
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 504.00 MiB. GPU 0 has a total capacity of 9.50 GiB of which 468.00 MiB is free. Including non-PyTorch memory, this process has 9.02 GiB memory in use. Of the allocated memory 8.03 GiB is allocated by PyTorch, and 140.44 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Generating code:   2%|▏         | 16/922 [02:11<3:24:17, 13.53s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   2%|▏         | 17/922 [02:18<3:01:21, 12.02s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   2%|▏         | 20/922 [02:28<1:52:36,  7.49s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   2%|▏         | 21/922 [02:38<2:00:59,  8.06s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   2%|▏         | 22/922 [02:44<1:54:59,  7.67s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   2%|▏         | 23/922 [02:49<1:44:31,  6.98s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   3%|▎         | 24/922 [02:56<1:45:13,  7.03s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   3%|▎         | 25/922 [03:06<1:53:36,  7.60s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   3%|▎         | 26/922 [03:09<1:37:05,  6.50s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   3%|▎         | 27/922 [03:18<1:48:17,  7.26s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   3%|▎         | 28/922 [03:42<2:56:50, 11.87s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   3%|▎         | 29/922 [03:47<2:27:05,  9.88s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   3%|▎         | 30/922 [04:08<3:18:04, 13.32s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   3%|▎         | 32/922 [04:23<2:37:13, 10.60s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   4%|▎         | 33/922 [04:33<2:33:40, 10.37s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   4%|▎         | 34/922 [04:38<2:15:46,  9.17s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   4%|▍         | 35/922 [04:50<2:26:57,  9.94s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   4%|▍         | 36/922 [05:05<2:47:35, 11.35s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   4%|▍         | 38/922 [05:11<1:51:01,  7.54s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   4%|▍         | 39/922 [05:17<1:44:29,  7.10s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   4%|▍         | 40/922 [05:24<1:45:55,  7.21s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   5%|▍         | 43/922 [05:29<1:02:57,  4.30s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   5%|▍         | 45/922 [05:39<1:06:42,  4.56s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   5%|▍         | 46/922 [05:50<1:23:27,  5.72s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   5%|▌         | 47/922 [06:00<1:37:02,  6.65s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   5%|▌         | 48/922 [06:07<1:37:17,  6.68s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   5%|▌         | 49/922 [06:19<1:58:11,  8.12s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   5%|▌         | 50/922 [06:40<2:47:44, 11.54s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   6%|▌         | 51/922 [06:49<2:37:47, 10.87s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   6%|▌         | 53/922 [06:54<1:42:05,  7.05s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   6%|▌         | 54/922 [07:08<2:06:21,  8.73s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   6%|▌         | 56/922 [07:18<1:43:34,  7.18s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   6%|▌         | 57/922 [07:24<1:42:14,  7.09s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   6%|▋         | 59/922 [07:38<1:40:50,  7.01s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   7%|▋         | 61/922 [07:46<1:26:06,  6.00s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   7%|▋         | 64/922 [07:54<1:05:05,  4.55s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   7%|▋         | 65/922 [08:07<1:25:00,  5.95s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   7%|▋         | 66/922 [08:29<2:10:46,  9.17s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   7%|▋         | 67/922 [08:37<2:06:34,  8.88s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   7%|▋         | 68/922 [08:45<2:02:50,  8.63s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   8%|▊         | 71/922 [08:54<1:21:35,  5.75s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   8%|▊         | 72/922 [09:03<1:31:44,  6.48s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   8%|▊         | 73/922 [09:14<1:43:06,  7.29s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   8%|▊         | 74/922 [09:22<1:45:31,  7.47s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   8%|▊         | 75/922 [09:33<1:58:06,  8.37s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   8%|▊         | 76/922 [09:37<1:44:05,  7.38s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   8%|▊         | 77/922 [09:45<1:42:49,  7.30s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   8%|▊         | 78/922 [09:51<1:41:12,  7.20s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   9%|▊         | 80/922 [10:15<2:09:17,  9.21s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   9%|▉         | 81/922 [10:26<2:15:36,  9.68s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   9%|▉         | 82/922 [10:34<2:08:59,  9.21s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   9%|▉         | 83/922 [10:43<2:08:50,  9.21s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   9%|▉         | 84/922 [10:56<2:21:42, 10.15s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   9%|▉         | 87/922 [11:26<2:21:32, 10.17s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  10%|▉         | 88/922 [11:33<2:11:07,  9.43s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  10%|▉         | 89/922 [11:41<2:06:05,  9.08s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  10%|▉         | 91/922 [11:49<1:38:25,  7.11s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  10%|▉         | 92/922 [11:57<1:40:48,  7.29s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  10%|█         | 93/922 [12:05<1:43:35,  7.50s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  10%|█         | 95/922 [12:10<1:16:34,  5.56s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  10%|█         | 96/922 [12:20<1:28:59,  6.46s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  11%|█         | 98/922 [12:29<1:17:21,  5.63s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  11%|█         | 101/922 [12:45<1:16:14,  5.57s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  11%|█         | 103/922 [12:50<1:03:13,  4.63s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  11%|█▏        | 106/922 [12:58<52:50,  3.89s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  12%|█▏        | 108/922 [13:07<54:00,  3.98s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  12%|█▏        | 109/922 [13:20<1:14:48,  5.52s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  12%|█▏        | 110/922 [13:28<1:20:31,  5.95s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  12%|█▏        | 111/922 [13:56<2:25:14, 10.74s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  12%|█▏        | 112/922 [14:04<2:13:55,  9.92s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  12%|█▏        | 113/922 [14:10<2:02:44,  9.10s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  12%|█▏        | 114/922 [14:34<2:52:59, 12.85s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  12%|█▏        | 115/922 [14:43<2:40:59, 11.97s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  13%|█▎        | 117/922 [14:51<1:53:01,  8.42s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  13%|█▎        | 118/922 [14:59<1:49:54,  8.20s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  13%|█▎        | 119/922 [15:07<1:49:33,  8.19s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  13%|█▎        | 122/922 [15:15<1:11:56,  5.40s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  13%|█▎        | 123/922 [15:24<1:21:31,  6.12s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  13%|█▎        | 124/922 [15:31<1:22:23,  6.19s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  14%|█▎        | 125/922 [15:39<1:30:11,  6.79s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  14%|█▎        | 126/922 [15:49<1:40:02,  7.54s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  14%|█▍        | 128/922 [15:59<1:24:55,  6.42s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  14%|█▍        | 129/922 [16:21<2:12:05,  9.99s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  14%|█▍        | 130/922 [16:31<2:12:44, 10.06s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  14%|█▍        | 132/922 [16:51<2:10:57,  9.95s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  14%|█▍        | 133/922 [17:14<2:52:55, 13.15s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  15%|█▍        | 136/922 [17:34<2:09:08,  9.86s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  15%|█▍        | 137/922 [17:50<2:23:08, 10.94s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  15%|█▍        | 138/922 [17:58<2:15:11, 10.35s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  15%|█▌        | 139/922 [18:04<2:03:17,  9.45s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  15%|█▌        | 140/922 [18:11<1:55:45,  8.88s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  15%|█▌        | 141/922 [18:21<1:57:31,  9.03s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  15%|█▌        | 142/922 [18:32<2:03:34,  9.51s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  16%|█▌        | 143/922 [18:42<2:08:23,  9.89s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  16%|█▌        | 145/922 [19:05<2:15:59, 10.50s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  16%|█▌        | 146/922 [19:15<2:12:56, 10.28s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  16%|█▌        | 147/922 [19:26<2:16:15, 10.55s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  16%|█▌        | 148/922 [19:37<2:19:18, 10.80s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  16%|█▌        | 149/922 [19:43<1:59:02,  9.24s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  16%|█▋        | 150/922 [20:06<2:50:52, 13.28s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  16%|█▋        | 151/922 [20:10<2:16:22, 10.61s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  16%|█▋        | 152/922 [20:24<2:28:38, 11.58s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  17%|█▋        | 153/922 [20:30<2:05:55,  9.83s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  17%|█▋        | 154/922 [20:36<1:51:06,  8.68s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  17%|█▋        | 155/922 [20:46<1:58:10,  9.24s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  17%|█▋        | 157/922 [20:56<1:31:17,  7.16s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  17%|█▋        | 158/922 [21:01<1:27:05,  6.84s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  17%|█▋        | 160/922 [21:09<1:12:06,  5.68s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  18%|█▊        | 163/922 [21:14<46:55,  3.71s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  18%|█▊        | 164/922 [21:22<56:07,  4.44s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  18%|█▊        | 165/922 [21:31<1:08:13,  5.41s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  18%|█▊        | 167/922 [21:38<1:00:40,  4.82s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  18%|█▊        | 169/922 [21:46<55:40,  4.44s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  19%|█▊        | 171/922 [21:54<53:09,  4.25s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  19%|█▊        | 172/922 [21:57<49:59,  4.00s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  19%|█▉        | 174/922 [22:04<48:27,  3.89s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  19%|█▉        | 176/922 [22:15<55:30,  4.47s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  19%|█▉        | 177/922 [22:21<58:54,  4.74s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  19%|█▉        | 179/922 [22:36<1:11:34,  5.78s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  20%|█▉        | 180/922 [23:09<2:17:55, 11.15s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  20%|█▉        | 182/922 [23:16<1:43:37,  8.40s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  20%|█▉        | 183/922 [23:22<1:38:27,  7.99s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  20%|█▉        | 184/922 [23:35<1:52:35,  9.15s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  20%|██        | 187/922 [23:46<1:17:58,  6.36s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  20%|██        | 188/922 [23:53<1:20:01,  6.54s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  20%|██        | 189/922 [24:02<1:24:58,  6.96s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  21%|██        | 190/922 [24:12<1:34:16,  7.73s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  21%|██        | 193/922 [24:16<54:28,  4.48s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  21%|██        | 194/922 [24:36<1:31:33,  7.55s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  21%|██        | 195/922 [24:48<1:42:33,  8.46s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  21%|██▏       | 197/922 [25:03<1:37:43,  8.09s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  21%|██▏       | 198/922 [25:07<1:28:19,  7.32s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  22%|██▏       | 199/922 [25:15<1:29:15,  7.41s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  22%|██▏       | 200/922 [25:21<1:24:58,  7.06s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  22%|██▏       | 201/922 [25:28<1:24:36,  7.04s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  22%|██▏       | 202/922 [25:37<1:31:22,  7.62s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  22%|██▏       | 203/922 [25:44<1:28:15,  7.36s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  22%|██▏       | 204/922 [25:53<1:33:00,  7.77s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  22%|██▏       | 205/922 [26:16<2:26:54, 12.29s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  23%|██▎       | 208/922 [26:25<1:24:54,  7.13s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  23%|██▎       | 209/922 [26:30<1:20:16,  6.76s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  23%|██▎       | 210/922 [26:39<1:25:26,  7.20s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  23%|██▎       | 212/922 [26:47<1:09:51,  5.90s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  23%|██▎       | 213/922 [26:53<1:10:38,  5.98s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  23%|██▎       | 214/922 [27:24<2:20:12, 11.88s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  23%|██▎       | 215/922 [27:52<3:09:58, 16.12s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  23%|██▎       | 216/922 [28:03<2:53:35, 14.75s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  24%|██▎       | 217/922 [28:11<2:30:29, 12.81s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  24%|██▎       | 218/922 [28:23<2:29:06, 12.71s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  24%|██▍       | 219/922 [28:35<2:25:55, 12.46s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  24%|██▍       | 220/922 [28:40<1:59:14, 10.19s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  24%|██▍       | 221/922 [28:52<2:04:30, 10.66s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  24%|██▍       | 222/922 [28:59<1:52:49,  9.67s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  24%|██▍       | 224/922 [29:11<1:32:48,  7.98s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  25%|██▍       | 226/922 [29:18<1:11:12,  6.14s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  25%|██▍       | 227/922 [29:27<1:18:56,  6.82s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  25%|██▍       | 229/922 [29:39<1:16:25,  6.62s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  25%|██▍       | 230/922 [30:10<2:16:35, 11.84s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  25%|██▌       | 233/922 [30:20<1:28:20,  7.69s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  25%|██▌       | 234/922 [30:27<1:26:25,  7.54s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  25%|██▌       | 235/922 [30:36<1:30:43,  7.92s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  26%|██▌       | 236/922 [30:43<1:27:57,  7.69s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  26%|██▌       | 237/922 [30:55<1:40:34,  8.81s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  26%|██▌       | 238/922 [31:12<2:03:15, 10.81s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  26%|██▌       | 239/922 [31:21<1:59:41, 10.51s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  26%|██▌       | 240/922 [31:42<2:31:06, 13.29s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  26%|██▌       | 242/922 [31:51<1:46:41,  9.41s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  27%|██▋       | 246/922 [31:55<52:43,  4.68s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  27%|██▋       | 247/922 [32:02<56:52,  5.06s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  27%|██▋       | 248/922 [32:09<1:01:43,  5.49s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  27%|██▋       | 249/922 [32:35<1:51:27,  9.94s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  27%|██▋       | 250/922 [32:43<1:46:29,  9.51s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  27%|██▋       | 251/922 [32:55<1:52:37, 10.07s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  27%|██▋       | 252/922 [33:04<1:48:33,  9.72s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  27%|██▋       | 253/922 [33:08<1:31:11,  8.18s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  28%|██▊       | 254/922 [33:38<2:40:09, 14.39s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  28%|██▊       | 255/922 [33:53<2:40:07, 14.40s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  28%|██▊       | 257/922 [34:07<2:02:48, 11.08s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  28%|██▊       | 258/922 [34:12<1:47:03,  9.67s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  28%|██▊       | 261/922 [34:17<1:01:54,  5.62s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  28%|██▊       | 262/922 [34:24<1:05:13,  5.93s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  29%|██▊       | 263/922 [34:31<1:06:56,  6.09s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  29%|██▊       | 265/922 [34:44<1:08:10,  6.23s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  29%|██▉       | 266/922 [34:54<1:16:23,  6.99s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  29%|██▉       | 267/922 [35:10<1:39:25,  9.11s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  29%|██▉       | 268/922 [35:39<2:35:54, 14.30s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  29%|██▉       | 269/922 [35:48<2:17:59, 12.68s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  29%|██▉       | 270/922 [35:57<2:08:25, 11.82s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  29%|██▉       | 271/922 [36:04<1:51:44, 10.30s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  30%|██▉       | 272/922 [36:15<1:55:47, 10.69s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  30%|██▉       | 273/922 [36:24<1:51:01, 10.26s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  30%|██▉       | 275/922 [36:57<2:19:09, 12.91s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  30%|███       | 279/922 [37:08<1:18:09,  7.29s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  30%|███       | 281/922 [37:17<1:08:36,  6.42s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  31%|███       | 282/922 [37:20<1:02:28,  5.86s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  31%|███       | 283/922 [37:41<1:34:41,  8.89s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  31%|███       | 284/922 [37:52<1:38:48,  9.29s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  31%|███       | 285/922 [38:03<1:43:13,  9.72s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  31%|███       | 286/922 [38:08<1:28:36,  8.36s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  31%|███       | 287/922 [38:19<1:37:08,  9.18s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  31%|███▏      | 289/922 [38:33<1:25:46,  8.13s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  31%|███▏      | 290/922 [38:48<1:44:46,  9.95s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  32%|███▏      | 291/922 [38:55<1:35:56,  9.12s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  32%|███▏      | 293/922 [39:04<1:14:14,  7.08s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  32%|███▏      | 294/922 [39:16<1:26:40,  8.28s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  32%|███▏      | 296/922 [39:25<1:10:12,  6.73s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  32%|███▏      | 297/922 [39:32<1:11:46,  6.89s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  32%|███▏      | 298/922 [39:38<1:09:07,  6.65s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  33%|███▎      | 302/922 [39:50<46:43,  4.52s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  33%|███▎      | 303/922 [40:00<56:27,  5.47s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  33%|███▎      | 306/922 [40:08<43:51,  4.27s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  33%|███▎      | 307/922 [40:19<56:04,  5.47s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  33%|███▎      | 308/922 [40:34<1:14:51,  7.32s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  34%|███▎      | 309/922 [40:41<1:14:06,  7.25s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  34%|███▎      | 310/922 [40:50<1:16:29,  7.50s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  34%|███▎      | 311/922 [40:52<1:02:35,  6.15s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  34%|███▍      | 312/922 [41:00<1:07:08,  6.60s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  34%|███▍      | 313/922 [41:09<1:14:52,  7.38s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  34%|███▍      | 314/922 [41:16<1:13:39,  7.27s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  34%|███▍      | 315/922 [41:32<1:39:21,  9.82s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  34%|███▍      | 316/922 [42:00<2:32:54, 15.14s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  34%|███▍      | 317/922 [42:14<2:27:54, 14.67s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  34%|███▍      | 318/922 [42:23<2:11:06, 13.02s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  35%|███▍      | 319/922 [42:28<1:48:42, 10.82s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  35%|███▍      | 321/922 [42:40<1:24:00,  8.39s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  35%|███▍      | 322/922 [42:43<1:12:56,  7.29s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  35%|███▌      | 323/922 [43:10<2:03:06, 12.33s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  35%|███▌      | 324/922 [43:22<2:01:35, 12.20s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  35%|███▌      | 326/922 [43:29<1:24:25,  8.50s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  36%|███▌      | 328/922 [44:02<1:52:51, 11.40s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  36%|███▌      | 329/922 [44:10<1:46:26, 10.77s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  36%|███▌      | 330/922 [44:13<1:28:34,  8.98s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  36%|███▌      | 334/922 [44:26<55:26,  5.66s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  36%|███▋      | 335/922 [44:35<1:01:11,  6.25s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  36%|███▋      | 336/922 [44:51<1:19:03,  8.10s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  37%|███▋      | 338/922 [44:56<1:00:07,  6.18s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  37%|███▋      | 339/922 [45:03<1:00:43,  6.25s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  37%|███▋      | 340/922 [45:09<1:00:16,  6.21s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  37%|███▋      | 341/922 [45:14<57:29,  5.94s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  37%|███▋      | 342/922 [45:21<1:00:08,  6.22s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  37%|███▋      | 343/922 [45:31<1:09:37,  7.22s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  37%|███▋      | 344/922 [45:36<1:02:48,  6.52s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  37%|███▋      | 345/922 [45:42<1:01:37,  6.41s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  38%|███▊      | 346/922 [46:10<2:01:01, 12.61s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  38%|███▊      | 348/922 [46:19<1:25:38,  8.95s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  38%|███▊      | 349/922 [46:31<1:34:27,  9.89s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  38%|███▊      | 351/922 [46:44<1:19:46,  8.38s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  38%|███▊      | 352/922 [46:50<1:15:18,  7.93s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  38%|███▊      | 353/922 [47:00<1:18:18,  8.26s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  38%|███▊      | 354/922 [47:06<1:13:33,  7.77s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  39%|███▊      | 355/922 [47:14<1:15:06,  7.95s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  39%|███▊      | 356/922 [47:25<1:21:57,  8.69s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  39%|███▊      | 357/922 [47:31<1:15:51,  8.06s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  39%|███▉      | 358/922 [47:44<1:27:21,  9.29s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  39%|███▉      | 359/922 [47:55<1:33:06,  9.92s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  39%|███▉      | 360/922 [48:07<1:37:37, 10.42s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  39%|███▉      | 361/922 [48:19<1:41:16, 10.83s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  39%|███▉      | 362/922 [48:30<1:43:34, 11.10s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  39%|███▉      | 364/922 [48:55<1:49:02, 11.72s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  40%|███▉      | 365/922 [49:05<1:43:32, 11.15s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  40%|███▉      | 366/922 [49:18<1:48:50, 11.74s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  40%|███▉      | 367/922 [49:25<1:35:32, 10.33s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  40%|███▉      | 368/922 [49:33<1:29:31,  9.70s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  40%|████      | 369/922 [49:47<1:41:39, 11.03s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  40%|████      | 370/922 [49:52<1:25:46,  9.32s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  40%|████      | 371/922 [50:04<1:32:18, 10.05s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  40%|████      | 372/922 [50:30<2:15:16, 14.76s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  41%|████      | 374/922 [50:36<1:25:07,  9.32s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  41%|████      | 375/922 [50:42<1:17:46,  8.53s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  41%|████      | 376/922 [51:07<1:58:05, 12.98s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  41%|████      | 377/922 [51:33<2:29:29, 16.46s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  41%|████      | 379/922 [51:45<1:47:49, 11.91s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  41%|████      | 380/922 [51:53<1:38:25, 10.90s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  41%|████▏     | 381/922 [52:01<1:32:39, 10.28s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  41%|████▏     | 382/922 [52:14<1:36:52, 10.76s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  42%|████▏     | 383/922 [52:44<2:25:53, 16.24s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  42%|████▏     | 384/922 [52:49<1:56:20, 12.97s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  42%|████▏     | 385/922 [52:56<1:41:27, 11.34s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  42%|████▏     | 386/922 [53:05<1:34:43, 10.60s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  42%|████▏     | 387/922 [53:14<1:30:07, 10.11s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  42%|████▏     | 388/922 [53:20<1:19:41,  8.95s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  42%|████▏     | 391/922 [53:29<49:42,  5.62s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  43%|████▎     | 392/922 [53:53<1:24:16,  9.54s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  43%|████▎     | 393/922 [54:05<1:27:51,  9.96s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  43%|████▎     | 394/922 [54:18<1:34:23, 10.73s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  43%|████▎     | 396/922 [54:27<1:12:08,  8.23s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  43%|████▎     | 397/922 [54:34<1:09:00,  7.89s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  43%|████▎     | 399/922 [54:43<57:15,  6.57s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  43%|████▎     | 401/922 [54:51<48:14,  5.56s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  44%|████▎     | 402/922 [55:10<1:12:00,  8.31s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  44%|████▎     | 403/922 [55:19<1:14:29,  8.61s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  44%|████▍     | 405/922 [55:26<57:09,  6.63s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  44%|████▍     | 406/922 [55:32<55:58,  6.51s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  44%|████▍     | 407/922 [55:44<1:07:04,  7.81s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  44%|████▍     | 408/922 [55:55<1:14:01,  8.64s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  44%|████▍     | 409/922 [56:11<1:29:42, 10.49s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  44%|████▍     | 410/922 [56:15<1:13:17,  8.59s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  45%|████▍     | 414/922 [56:24<40:58,  4.84s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  45%|████▌     | 415/922 [56:38<53:23,  6.32s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  45%|████▌     | 416/922 [56:42<50:37,  6.00s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  45%|████▌     | 418/922 [56:52<47:14,  5.62s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  45%|████▌     | 419/922 [57:04<57:48,  6.90s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  46%|████▌     | 420/922 [57:13<1:01:33,  7.36s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  46%|████▌     | 421/922 [57:28<1:17:08,  9.24s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  46%|████▌     | 422/922 [57:36<1:13:28,  8.82s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  46%|████▌     | 423/922 [57:46<1:17:43,  9.35s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  46%|████▌     | 424/922 [57:49<1:02:59,  7.59s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  46%|████▌     | 425/922 [58:01<1:11:36,  8.64s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  46%|████▋     | 427/922 [58:05<47:14,  5.73s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  46%|████▋     | 428/922 [58:14<53:45,  6.53s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  47%|████▋     | 430/922 [58:19<39:32,  4.82s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  47%|████▋     | 433/922 [58:29<34:02,  4.18s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  47%|████▋     | 434/922 [58:35<36:58,  4.55s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  47%|████▋     | 435/922 [58:48<50:23,  6.21s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  47%|████▋     | 436/922 [59:00<1:01:33,  7.60s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  47%|████▋     | 437/922 [59:13<1:11:25,  8.84s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  48%|████▊     | 438/922 [59:38<1:45:14, 13.05s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  48%|████▊     | 439/922 [1:00:09<2:24:07, 17.90s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  48%|████▊     | 440/922 [1:00:18<2:05:03, 15.57s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  48%|████▊     | 443/922 [1:00:39<1:26:20, 10.81s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  48%|████▊     | 444/922 [1:00:49<1:24:55, 10.66s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  48%|████▊     | 445/922 [1:00:58<1:21:08, 10.21s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  48%|████▊     | 446/922 [1:01:13<1:31:53, 11.58s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  48%|████▊     | 447/922 [1:01:23<1:27:03, 11.00s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  49%|████▉     | 452/922 [1:01:28<35:41,  4.56s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  49%|████▉     | 453/922 [1:01:36<40:12,  5.14s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  49%|████▉     | 454/922 [1:02:00<1:06:16,  8.50s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  49%|████▉     | 455/922 [1:02:22<1:27:33, 11.25s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  50%|████▉     | 457/922 [1:02:35<1:13:15,  9.45s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  50%|████▉     | 459/922 [1:02:46<1:03:11,  8.19s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  50%|█████     | 462/922 [1:03:03<54:51,  7.15s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  50%|█████     | 463/922 [1:03:10<53:19,  6.97s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  50%|█████     | 464/922 [1:03:15<50:29,  6.61s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  50%|█████     | 465/922 [1:03:23<53:40,  7.05s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  51%|█████     | 466/922 [1:03:42<1:15:07,  9.89s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  51%|█████     | 467/922 [1:03:54<1:18:36, 10.37s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  51%|█████     | 469/922 [1:04:04<1:01:56,  8.20s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  51%|█████     | 471/922 [1:04:11<48:08,  6.40s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  51%|█████     | 472/922 [1:04:17<47:06,  6.28s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  51%|█████▏    | 474/922 [1:04:33<51:29,  6.90s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  52%|█████▏    | 475/922 [1:04:42<54:12,  7.28s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  52%|█████▏    | 478/922 [1:04:50<37:34,  5.08s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  52%|█████▏    | 479/922 [1:04:53<35:50,  4.86s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  52%|█████▏    | 480/922 [1:05:20<1:09:17,  9.41s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  52%|█████▏    | 481/922 [1:05:52<1:47:06, 14.57s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  52%|█████▏    | 482/922 [1:06:00<1:35:14, 12.99s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  52%|█████▏    | 483/922 [1:06:09<1:26:46, 11.86s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  53%|█████▎    | 485/922 [1:06:17<1:02:48,  8.62s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  53%|█████▎    | 487/922 [1:06:24<47:45,  6.59s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  53%|█████▎    | 489/922 [1:06:32<40:28,  5.61s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  53%|█████▎    | 490/922 [1:06:41<45:58,  6.38s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  54%|█████▎    | 495/922 [1:06:55<30:32,  4.29s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  54%|█████▍    | 497/922 [1:07:08<34:02,  4.81s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  54%|█████▍    | 498/922 [1:07:15<36:38,  5.18s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  54%|█████▍    | 499/922 [1:07:26<44:20,  6.29s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  54%|█████▍    | 500/922 [1:07:36<48:45,  6.93s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  54%|█████▍    | 502/922 [1:07:49<47:30,  6.79s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  55%|█████▍    | 503/922 [1:08:13<1:12:02, 10.32s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  55%|█████▍    | 504/922 [1:08:29<1:21:09, 11.65s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  55%|█████▍    | 505/922 [1:08:40<1:19:57, 11.50s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  55%|█████▍    | 506/922 [1:08:47<1:12:08, 10.40s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  55%|█████▌    | 508/922 [1:09:15<1:22:15, 11.92s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  55%|█████▌    | 509/922 [1:09:29<1:24:57, 12.34s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  55%|█████▌    | 510/922 [1:09:34<1:12:48, 10.60s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  55%|█████▌    | 511/922 [1:09:44<1:11:39, 10.46s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  56%|█████▌    | 512/922 [1:10:07<1:33:50, 13.73s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  56%|█████▌    | 513/922 [1:10:23<1:37:31, 14.31s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  56%|█████▌    | 515/922 [1:10:27<1:01:08,  9.01s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  56%|█████▋    | 519/922 [1:10:36<34:41,  5.16s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  57%|█████▋    | 522/922 [1:10:45<29:19,  4.40s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  57%|█████▋    | 523/922 [1:11:10<49:17,  7.41s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  57%|█████▋    | 524/922 [1:11:16<47:44,  7.20s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  57%|█████▋    | 525/922 [1:11:28<55:02,  8.32s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  57%|█████▋    | 526/922 [1:11:44<1:05:08,  9.87s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  57%|█████▋    | 527/922 [1:12:15<1:38:25, 14.95s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  57%|█████▋    | 529/922 [1:12:31<1:19:22, 12.12s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  57%|█████▋    | 530/922 [1:12:44<1:20:40, 12.35s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  58%|█████▊    | 531/922 [1:12:55<1:18:58, 12.12s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  58%|█████▊    | 532/922 [1:12:59<1:04:16,  9.89s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  58%|█████▊    | 533/922 [1:13:14<1:13:59, 11.41s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  58%|█████▊    | 534/922 [1:13:25<1:13:31, 11.37s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  58%|█████▊    | 535/922 [1:13:38<1:15:29, 11.70s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  58%|█████▊    | 536/922 [1:13:44<1:05:38, 10.20s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  58%|█████▊    | 537/922 [1:13:54<1:03:24,  9.88s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  58%|█████▊    | 538/922 [1:14:03<1:03:15,  9.88s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  58%|█████▊    | 539/922 [1:14:14<1:04:35, 10.12s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  59%|█████▊    | 540/922 [1:14:46<1:46:23, 16.71s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  59%|█████▊    | 541/922 [1:14:56<1:32:02, 14.49s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  59%|█████▉    | 542/922 [1:15:01<1:15:16, 11.89s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  59%|█████▉    | 544/922 [1:15:10<53:02,  8.42s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  59%|█████▉    | 545/922 [1:15:20<55:34,  8.85s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  59%|█████▉    | 546/922 [1:15:39<1:11:49, 11.46s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  59%|█████▉    | 547/922 [1:15:48<1:07:20, 10.77s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  60%|█████▉    | 549/922 [1:15:59<53:05,  8.54s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  60%|█████▉    | 551/922 [1:16:07<41:40,  6.74s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  60%|█████▉    | 552/922 [1:16:14<41:02,  6.65s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  60%|██████    | 554/922 [1:16:29<43:44,  7.13s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  60%|██████    | 556/922 [1:16:40<40:08,  6.58s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  60%|██████    | 557/922 [1:16:51<44:16,  7.28s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  61%|██████    | 558/922 [1:17:06<54:37,  9.00s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  61%|██████    | 560/922 [1:17:10<38:44,  6.42s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  61%|██████    | 561/922 [1:17:20<42:32,  7.07s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  61%|██████    | 562/922 [1:17:27<43:02,  7.17s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  61%|██████    | 563/922 [1:17:34<42:48,  7.15s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  61%|██████    | 564/922 [1:17:39<39:15,  6.58s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  61%|██████▏   | 566/922 [1:17:47<32:22,  5.46s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  61%|██████▏   | 567/922 [1:17:59<41:18,  6.98s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  62%|██████▏   | 568/922 [1:18:12<50:34,  8.57s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  62%|██████▏   | 569/922 [1:18:21<50:09,  8.53s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  62%|██████▏   | 570/922 [1:18:30<50:49,  8.66s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  62%|██████▏   | 572/922 [1:19:02<1:09:32, 11.92s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  62%|██████▏   | 573/922 [1:19:14<1:09:09, 11.89s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  62%|██████▏   | 574/922 [1:19:22<1:04:03, 11.05s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  62%|██████▏   | 575/922 [1:19:30<59:08, 10.23s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  62%|██████▏   | 576/922 [1:19:37<53:57,  9.36s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  63%|██████▎   | 578/922 [1:19:47<42:38,  7.44s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  63%|██████▎   | 579/922 [1:19:55<42:40,  7.46s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  63%|██████▎   | 580/922 [1:20:02<42:37,  7.48s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  63%|██████▎   | 581/922 [1:20:12<46:13,  8.13s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  63%|██████▎   | 583/922 [1:20:39<59:05, 10.46s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  63%|██████▎   | 584/922 [1:20:52<1:01:46, 10.97s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  64%|██████▎   | 586/922 [1:21:10<57:07, 10.20s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  64%|██████▎   | 587/922 [1:21:18<53:57,  9.66s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  64%|██████▍   | 588/922 [1:21:48<1:21:28, 14.64s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  64%|██████▍   | 589/922 [1:21:58<1:14:57, 13.51s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  64%|██████▍   | 590/922 [1:22:04<1:03:17, 11.44s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  64%|██████▍   | 591/922 [1:22:11<56:20, 10.21s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  64%|██████▍   | 592/922 [1:22:19<51:54,  9.44s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  64%|██████▍   | 593/922 [1:22:25<46:49,  8.54s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  65%|██████▍   | 595/922 [1:22:35<37:58,  6.97s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  65%|██████▍   | 596/922 [1:22:44<40:33,  7.46s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  65%|██████▍   | 597/922 [1:22:52<41:27,  7.65s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  65%|██████▍   | 599/922 [1:23:06<39:21,  7.31s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  65%|██████▌   | 601/922 [1:23:15<33:40,  6.29s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  65%|██████▌   | 602/922 [1:23:21<32:28,  6.09s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  65%|██████▌   | 603/922 [1:23:29<35:18,  6.64s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  66%|██████▌   | 604/922 [1:23:37<36:54,  6.96s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  66%|██████▌   | 605/922 [1:24:09<1:11:44, 13.58s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  66%|██████▌   | 606/922 [1:24:16<1:01:34, 11.69s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  66%|██████▌   | 607/922 [1:24:34<1:10:38, 13.46s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  66%|██████▌   | 608/922 [1:24:41<1:01:16, 11.71s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  66%|██████▌   | 609/922 [1:24:52<59:36, 11.43s/it]  The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  66%|██████▌   | 610/922 [1:24:59<53:22, 10.27s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  66%|██████▋   | 611/922 [1:25:12<57:02, 11.01s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  66%|██████▋   | 613/922 [1:25:23<43:27,  8.44s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  67%|██████▋   | 614/922 [1:25:32<43:33,  8.48s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  67%|██████▋   | 615/922 [1:25:40<43:42,  8.54s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  67%|██████▋   | 616/922 [1:25:56<53:56, 10.58s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  67%|██████▋   | 617/922 [1:26:03<48:53,  9.62s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  67%|██████▋   | 618/922 [1:26:14<50:04,  9.88s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  67%|██████▋   | 620/922 [1:26:23<37:45,  7.50s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  67%|██████▋   | 621/922 [1:26:36<44:23,  8.85s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  67%|██████▋   | 622/922 [1:26:40<37:42,  7.54s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  68%|██████▊   | 623/922 [1:26:47<36:41,  7.36s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  68%|██████▊   | 624/922 [1:26:52<34:03,  6.86s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  68%|██████▊   | 625/922 [1:27:03<38:38,  7.81s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  68%|██████▊   | 627/922 [1:27:19<38:56,  7.92s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  68%|██████▊   | 629/922 [1:27:25<29:07,  5.96s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  68%|██████▊   | 631/922 [1:27:36<28:10,  5.81s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  69%|██████▊   | 632/922 [1:27:46<33:01,  6.83s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  69%|██████▊   | 633/922 [1:27:54<34:14,  7.11s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  69%|██████▉   | 634/922 [1:28:02<34:22,  7.16s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  69%|██████▉   | 635/922 [1:28:11<36:17,  7.59s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  69%|██████▉   | 637/922 [1:28:17<27:40,  5.83s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  69%|██████▉   | 639/922 [1:28:27<25:42,  5.45s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  70%|██████▉   | 641/922 [1:28:36<23:37,  5.04s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  70%|██████▉   | 643/922 [1:28:42<20:50,  4.48s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  70%|██████▉   | 644/922 [1:28:48<21:47,  4.70s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  70%|██████▉   | 645/922 [1:28:58<26:46,  5.80s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  70%|███████   | 647/922 [1:29:05<22:20,  4.87s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  70%|███████   | 648/922 [1:29:14<27:08,  5.94s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  70%|███████   | 649/922 [1:29:23<29:45,  6.54s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  70%|███████   | 650/922 [1:29:33<33:33,  7.40s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  71%|███████   | 651/922 [1:29:41<33:47,  7.48s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  71%|███████   | 652/922 [1:29:48<33:24,  7.42s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  71%|███████   | 653/922 [1:29:58<37:07,  8.28s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  71%|███████   | 654/922 [1:30:04<33:53,  7.59s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  71%|███████   | 655/922 [1:30:13<35:26,  7.96s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  71%|███████   | 656/922 [1:30:20<34:00,  7.67s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  71%|███████▏  | 657/922 [1:30:34<42:11,  9.55s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  71%|███████▏  | 658/922 [1:30:43<41:04,  9.34s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  71%|███████▏  | 659/922 [1:30:47<34:21,  7.84s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  72%|███████▏  | 660/922 [1:30:53<31:54,  7.31s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  72%|███████▏  | 661/922 [1:31:00<30:38,  7.04s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  72%|███████▏  | 662/922 [1:31:07<30:28,  7.03s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  72%|███████▏  | 663/922 [1:31:14<30:52,  7.15s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  72%|███████▏  | 665/922 [1:31:27<29:08,  6.80s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  72%|███████▏  | 666/922 [1:31:35<30:25,  7.13s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  72%|███████▏  | 667/922 [1:31:48<36:37,  8.62s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  72%|███████▏  | 668/922 [1:31:56<36:18,  8.58s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  73%|███████▎  | 669/922 [1:32:15<48:16, 11.45s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  73%|███████▎  | 670/922 [1:32:23<44:14, 10.53s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  73%|███████▎  | 672/922 [1:32:31<31:14,  7.50s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  73%|███████▎  | 675/922 [1:32:40<21:31,  5.23s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  73%|███████▎  | 676/922 [1:32:53<27:37,  6.74s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  74%|███████▎  | 678/922 [1:33:00<22:56,  5.64s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  74%|███████▎  | 679/922 [1:33:10<26:33,  6.56s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  74%|███████▍  | 680/922 [1:33:20<28:55,  7.17s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  74%|███████▍  | 681/922 [1:33:31<32:58,  8.21s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  74%|███████▍  | 682/922 [1:33:45<38:47,  9.70s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  74%|███████▍  | 683/922 [1:33:53<36:22,  9.13s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  74%|███████▍  | 684/922 [1:34:03<37:36,  9.48s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  74%|███████▍  | 685/922 [1:34:15<40:37, 10.28s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  74%|███████▍  | 686/922 [1:34:25<39:32, 10.05s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  75%|███████▍  | 689/922 [1:34:56<39:25, 10.15s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  75%|███████▍  | 691/922 [1:35:04<31:11,  8.10s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  75%|███████▌  | 695/922 [1:35:08<17:13,  4.55s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  76%|███████▌  | 697/922 [1:35:16<16:51,  4.50s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  76%|███████▌  | 698/922 [1:35:27<20:17,  5.44s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  76%|███████▌  | 699/922 [1:35:35<22:08,  5.96s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  76%|███████▌  | 700/922 [1:35:43<23:25,  6.33s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  76%|███████▌  | 702/922 [1:36:02<27:23,  7.47s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  76%|███████▋  | 704/922 [1:36:14<25:24,  6.99s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  77%|███████▋  | 707/922 [1:36:23<18:51,  5.26s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  77%|███████▋  | 709/922 [1:36:25<14:40,  4.14s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  77%|███████▋  | 710/922 [1:36:33<16:38,  4.71s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  77%|███████▋  | 711/922 [1:36:40<18:05,  5.15s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  77%|███████▋  | 712/922 [1:37:01<30:29,  8.71s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  77%|███████▋  | 713/922 [1:37:09<29:34,  8.49s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  77%|███████▋  | 714/922 [1:37:21<32:45,  9.45s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  78%|███████▊  | 716/922 [1:37:26<22:22,  6.52s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  78%|███████▊  | 717/922 [1:37:36<24:41,  7.23s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  78%|███████▊  | 718/922 [1:37:40<22:00,  6.47s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  78%|███████▊  | 719/922 [1:37:50<24:46,  7.32s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  78%|███████▊  | 721/922 [1:37:58<19:54,  5.94s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  78%|███████▊  | 722/922 [1:38:08<22:38,  6.79s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  79%|███████▊  | 724/922 [1:38:12<16:36,  5.03s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  79%|███████▊  | 725/922 [1:38:21<18:46,  5.72s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  79%|███████▊  | 726/922 [1:38:38<28:17,  8.66s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  79%|███████▉  | 729/922 [1:38:46<17:36,  5.47s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  79%|███████▉  | 730/922 [1:38:54<19:31,  6.10s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  79%|███████▉  | 731/922 [1:39:16<30:26,  9.56s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  79%|███████▉  | 732/922 [1:39:23<27:50,  8.79s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  80%|███████▉  | 733/922 [1:39:29<25:29,  8.09s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  80%|███████▉  | 736/922 [1:39:35<15:38,  5.05s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  80%|████████  | 739/922 [1:39:43<12:10,  3.99s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  80%|████████  | 741/922 [1:39:50<11:28,  3.81s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  80%|████████  | 742/922 [1:39:59<14:19,  4.77s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  81%|████████  | 744/922 [1:40:04<11:46,  3.97s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  81%|████████  | 745/922 [1:40:30<24:18,  8.24s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  81%|████████  | 746/922 [1:40:43<26:57,  9.19s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  81%|████████  | 747/922 [1:40:53<27:05,  9.29s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  81%|████████  | 749/922 [1:41:03<21:52,  7.59s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  81%|████████▏ | 751/922 [1:41:24<24:51,  8.72s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  82%|████████▏ | 752/922 [1:41:34<25:15,  8.91s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  82%|████████▏ | 753/922 [1:41:55<32:43, 11.62s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  82%|████████▏ | 754/922 [1:42:05<31:23, 11.21s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  82%|████████▏ | 755/922 [1:42:09<26:25,  9.50s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  82%|████████▏ | 756/922 [1:42:17<24:49,  8.98s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  82%|████████▏ | 758/922 [1:42:33<23:46,  8.70s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  82%|████████▏ | 760/922 [1:43:04<30:06, 11.15s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  83%|████████▎ | 761/922 [1:43:15<30:00, 11.18s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  83%|████████▎ | 762/922 [1:43:21<26:49, 10.06s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  83%|████████▎ | 764/922 [1:43:30<20:23,  7.74s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  83%|████████▎ | 765/922 [1:43:56<31:15, 11.94s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  83%|████████▎ | 766/922 [1:44:02<27:05, 10.42s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  83%|████████▎ | 767/922 [1:44:11<25:35,  9.91s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  83%|████████▎ | 768/922 [1:44:25<28:29, 11.10s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  83%|████████▎ | 769/922 [1:44:37<29:01, 11.38s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  84%|████████▎ | 770/922 [1:44:44<25:25, 10.04s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  84%|████████▎ | 771/922 [1:45:14<40:09, 15.96s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  84%|████████▍ | 773/922 [1:45:25<27:50, 11.21s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  84%|████████▍ | 774/922 [1:45:35<27:01, 10.96s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  84%|████████▍ | 775/922 [1:45:45<26:10, 10.68s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  84%|████████▍ | 776/922 [1:45:58<27:08, 11.15s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  84%|████████▍ | 777/922 [1:46:10<27:42, 11.47s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  84%|████████▍ | 778/922 [1:46:20<26:21, 10.98s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  84%|████████▍ | 779/922 [1:46:29<25:09, 10.55s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  85%|████████▍ | 781/922 [1:46:35<16:31,  7.03s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  85%|████████▍ | 783/922 [1:46:42<13:14,  5.71s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  85%|████████▌ | 784/922 [1:46:48<13:29,  5.86s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  85%|████████▌ | 785/922 [1:47:15<24:56, 10.92s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  85%|████████▌ | 786/922 [1:47:33<28:16, 12.47s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  86%|████████▌ | 789/922 [1:47:44<17:38,  7.96s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  86%|████████▌ | 790/922 [1:47:54<18:27,  8.39s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  86%|████████▌ | 791/922 [1:48:02<18:07,  8.30s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  86%|████████▌ | 792/922 [1:48:14<19:53,  9.18s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  86%|████████▌ | 793/922 [1:48:31<24:16, 11.29s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  86%|████████▌ | 794/922 [1:48:46<25:46, 12.08s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  86%|████████▋ | 796/922 [1:48:53<17:48,  8.48s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  86%|████████▋ | 797/922 [1:49:03<18:30,  8.89s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  87%|████████▋ | 798/922 [1:49:07<15:49,  7.66s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  87%|████████▋ | 800/922 [1:49:15<12:11,  5.99s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  87%|████████▋ | 802/922 [1:49:29<12:55,  6.47s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  87%|████████▋ | 803/922 [1:49:38<13:55,  7.02s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  87%|████████▋ | 804/922 [1:49:45<13:45,  7.00s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  87%|████████▋ | 805/922 [1:50:01<17:57,  9.21s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  87%|████████▋ | 806/922 [1:50:13<19:11,  9.93s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  88%|████████▊ | 808/922 [1:50:16<11:54,  6.27s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  88%|████████▊ | 809/922 [1:50:24<12:47,  6.79s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  88%|████████▊ | 810/922 [1:50:32<13:14,  7.10s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  88%|████████▊ | 813/922 [1:50:41<08:54,  4.91s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  88%|████████▊ | 814/922 [1:50:51<10:39,  5.92s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  89%|████████▊ | 816/922 [1:50:58<08:58,  5.08s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  89%|████████▊ | 817/922 [1:51:06<09:54,  5.66s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  89%|████████▊ | 818/922 [1:51:11<09:39,  5.57s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  89%|████████▉ | 819/922 [1:51:20<10:42,  6.24s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  89%|████████▉ | 820/922 [1:51:24<09:31,  5.61s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  89%|████████▉ | 821/922 [1:51:36<12:20,  7.33s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  89%|████████▉ | 823/922 [1:51:42<09:00,  5.46s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  89%|████████▉ | 824/922 [1:51:46<08:38,  5.29s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  89%|████████▉ | 825/922 [1:52:00<12:00,  7.43s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  90%|████████▉ | 826/922 [1:52:15<15:09,  9.48s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  90%|████████▉ | 827/922 [1:52:26<15:39,  9.89s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  90%|████████▉ | 828/922 [1:52:35<15:03,  9.61s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  90%|█████████ | 830/922 [1:52:41<10:05,  6.58s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  90%|█████████ | 831/922 [1:52:55<12:39,  8.34s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  90%|█████████ | 834/922 [1:53:03<08:10,  5.57s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  91%|█████████ | 835/922 [1:53:15<09:42,  6.70s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  91%|█████████ | 836/922 [1:53:42<15:56, 11.12s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  91%|█████████ | 837/922 [1:53:48<14:02,  9.91s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  91%|█████████ | 838/922 [1:53:57<13:46,  9.83s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  91%|█████████ | 839/922 [1:54:07<13:33,  9.80s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  91%|█████████▏| 842/922 [1:54:14<07:51,  5.89s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  92%|█████████▏| 844/922 [1:54:28<08:03,  6.20s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  92%|█████████▏| 846/922 [1:54:36<06:52,  5.43s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  92%|█████████▏| 847/922 [1:55:05<12:22,  9.90s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  92%|█████████▏| 848/922 [1:55:12<11:25,  9.26s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  92%|█████████▏| 849/922 [1:55:28<13:20, 10.97s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  92%|█████████▏| 850/922 [1:55:39<13:11, 10.99s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  92%|█████████▏| 851/922 [1:55:48<12:18, 10.40s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  92%|█████████▏| 852/922 [1:56:00<12:33, 10.77s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  93%|█████████▎| 853/922 [1:56:11<12:21, 10.75s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  93%|█████████▎| 854/922 [1:56:19<11:28, 10.13s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  93%|█████████▎| 855/922 [1:56:30<11:23, 10.20s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  93%|█████████▎| 857/922 [1:56:45<09:47,  9.03s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  93%|█████████▎| 858/922 [1:56:49<08:21,  7.84s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  93%|█████████▎| 859/922 [1:56:54<07:34,  7.22s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  93%|█████████▎| 860/922 [1:57:04<08:11,  7.93s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  93%|█████████▎| 861/922 [1:57:14<08:25,  8.29s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  94%|█████████▎| 863/922 [1:57:26<07:13,  7.35s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  94%|█████████▎| 864/922 [1:57:33<07:09,  7.41s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  94%|█████████▍| 865/922 [1:57:43<07:35,  7.99s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  94%|█████████▍| 866/922 [1:57:51<07:21,  7.88s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  94%|█████████▍| 868/922 [1:57:57<05:18,  5.89s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  94%|█████████▍| 869/922 [1:58:07<06:00,  6.81s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  94%|█████████▍| 870/922 [1:58:18<06:45,  7.80s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  95%|█████████▍| 873/922 [1:58:24<03:57,  4.85s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  95%|█████████▍| 874/922 [1:58:34<04:37,  5.79s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  95%|█████████▍| 875/922 [1:58:41<04:51,  6.21s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  95%|█████████▌| 876/922 [1:59:06<08:03, 10.51s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  95%|█████████▌| 877/922 [1:59:11<06:52,  9.17s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  95%|█████████▌| 878/922 [1:59:20<06:45,  9.22s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  96%|█████████▌| 881/922 [1:59:28<03:53,  5.70s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  96%|█████████▌| 883/922 [1:59:41<03:54,  6.01s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  96%|█████████▌| 884/922 [1:59:50<04:07,  6.51s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  96%|█████████▌| 885/922 [2:00:01<04:38,  7.54s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  96%|█████████▌| 887/922 [2:00:06<03:16,  5.61s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  96%|█████████▋| 889/922 [2:00:19<03:16,  5.97s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  97%|█████████▋| 890/922 [2:00:29<03:33,  6.69s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  97%|█████████▋| 891/922 [2:00:35<03:23,  6.58s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  97%|█████████▋| 892/922 [2:00:44<03:32,  7.08s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  97%|█████████▋| 894/922 [2:01:00<03:31,  7.54s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  97%|█████████▋| 895/922 [2:01:08<03:27,  7.68s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  97%|█████████▋| 896/922 [2:01:14<03:08,  7.25s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  97%|█████████▋| 897/922 [2:01:21<02:59,  7.18s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  97%|█████████▋| 898/922 [2:01:32<03:18,  8.26s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  98%|█████████▊| 899/922 [2:01:38<02:54,  7.61s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  98%|█████████▊| 900/922 [2:01:46<02:46,  7.55s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  98%|█████████▊| 901/922 [2:02:01<03:27,  9.88s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  98%|█████████▊| 902/922 [2:02:09<03:05,  9.30s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  98%|█████████▊| 903/922 [2:02:15<02:35,  8.17s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  98%|█████████▊| 904/922 [2:02:29<03:02, 10.12s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  98%|█████████▊| 905/922 [2:02:47<03:30, 12.40s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  98%|█████████▊| 906/922 [2:02:54<02:49, 10.59s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  98%|█████████▊| 907/922 [2:03:07<02:50, 11.38s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  98%|█████████▊| 908/922 [2:03:16<02:28, 10.59s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  99%|█████████▊| 910/922 [2:03:21<01:24,  7.05s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  99%|█████████▉| 912/922 [2:03:30<01:00,  6.01s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  99%|█████████▉| 913/922 [2:03:43<01:08,  7.60s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  99%|█████████▉| 916/922 [2:03:50<00:29,  4.99s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:  99%|█████████▉| 917/922 [2:04:01<00:30,  6.13s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code: 100%|█████████▉| 920/922 [2:04:08<00:08,  4.40s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code: 100%|█████████▉| 921/922 [2:04:21<00:05,  5.87s/it]Generating code: 100%|██████████| 922/922 [2:04:21<00:00,  8.09s/it]
