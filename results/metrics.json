@@ -1,0 +1,14 @@
+[
+    {
+        "file": "../results/test_cru_phi_2.json",
+        "execution_accuracy": 0.0014619883040935672,
+        "answer_exact_match": 0.0,
+        "program_exact_match": 0.0
+    },
+    {
+        "file": "../results/test_cru_deepseek_coder_6_7b_instruct.json",
+        "execution_accuracy": 0.03508771929824561,
+        "answer_exact_match": 0.01023391812865497,
+        "program_exact_match": 0.0
+    }
+]

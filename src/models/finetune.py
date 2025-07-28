@@ -53,15 +53,19 @@ def load_dataset(json_path, prompt_path):
         if not program:
             continue
         compiled_prompt = prompt.format(question=question, chunk=context)
-        label = f"{compiled_prompt}\n{program}"
-        samples.append({"text": label})
+        samples.append({"prompt": compiled_prompt, "program": program})
     return Dataset.from_list(samples)
 
 
 def tokenize_function(examples, tokenizer):
-    return tokenizer(
-        examples["text"], truncation=True, padding="max_length", max_length=MAX_LENGTH
+    full_text = examples["prompt"] + "\n" + examples["program"]
+    tokenized = tokenizer(
+        full_text, truncation=True, padding="max_length", max_length=MAX_LENGTH
     )
+    prompt_len = len(tokenizer(examples["prompt"])["input_ids"])
+    labels = [-100] * prompt_len + tokenized["input_ids"][prompt_len:]
+    tokenized["labels"] = labels
+    return tokenized
 
 
 def main(input_path, output_dir, model_name, prompt_path):

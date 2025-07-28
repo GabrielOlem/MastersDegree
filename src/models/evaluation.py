@@ -97,7 +97,7 @@ def main(model_path, dataset_path, output_path, prompt_path):
         generated_exec = safe_exec(generated)
         # Metrics
         exec_acc = execution_accuracy(generated_exec, answer_exec)
-        ans_em = answer_exact_match(answer_exec, answer)
+        ans_em = answer_exact_match(generated_exec, answer)
         prog_em = program_exact_match(generated, target_code)
         results.append(
             {
