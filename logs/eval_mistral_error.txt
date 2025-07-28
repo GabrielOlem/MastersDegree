@@ -25,3 +25,11 @@ The following generation flags are not valid and may be ignored: ['temperature']
 Generating code:   3%|▎         | 25/922 [2:43:03<82:04:13, 329.38s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
 Generating code:   3%|▎         | 26/922 [2:44:22<64:48:40, 260.40s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
 Generating code:   3%|▎         | 27/922 [2:46:19<54:39:40, 219.87s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   3%|▎         | 28/922 [2:59:00<93:14:15, 375.45s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   3%|▎         | 29/922 [3:14:42<134:05:13, 540.55s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   3%|▎         | 30/922 [3:23:17<132:03:09, 532.95s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   3%|▎         | 32/922 [3:28:36<89:38:03, 362.57s/it] The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   4%|▎         | 33/922 [3:59:39<180:37:07, 731.41s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   4%|▎         | 34/922 [4:08:23<167:07:20, 677.52s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating code:   4%|▍         | 35/922 [4:15:06<148:37:34, 603.22s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+slurmstepd: error: *** JOB 24853 ON cluster-node6 CANCELLED AT 2025-07-27T16:25:43 ***
